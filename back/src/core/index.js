@@ -9,15 +9,14 @@ import cors from 'cors';
 import Xlog from '../xdk/Xlog';
 import logger from '../tools/logger';
 
-// imports controllers Here
+import * as userController from '../controllers/userController';
 
 import { update } from 'ddos/lib';
 
 const X = new Xlog('core:index');
 
 const port = (process.env.NODE_ENV === 'PRODUCTION') ? 3000 : 3080;
-const mongooseurl = (process.env.NODE_ENV === "PRODUCTION") ? `mongodb://localhost:27017/nutritiv` : `mongodb://localhost:27017/nutritiv-dev`;
-
+const mongooseurl = (process.env.NODE_ENV === "PRODUCTION") ? `mongodb://localhost:27017/recipesManager` : `mongodb://localhost:27017/recipesManager-dev`;
 
 console.time('[*] Booting');
 
@@ -31,8 +30,22 @@ function configRouter() {
     }
     router.route('/')
         .get(logger, (req, res) => {
-            return res.status(200).send('nutri\'tiv-back')
+            return res.status(200).send('Recipe\'s Manager')
         });
+
+    router.route('/register')
+        .post(logger, userController.registerUser);
+
+    router.route('/login')
+        .post(logger, userController.logUser);
+    
+
+    router.route('/user/delete')
+        .delete(logger, userController.deleteUser);
+
+    router.route('/user/:id')
+        .get(logger, userController.getInfosUser)
+        .put(logger, userController.editInfosUser);
 
     app.use(router);
 }
@@ -77,14 +90,13 @@ function initMongoConnect() {
     });
 }
 
-
 initMongoConnect();
 
 
 configApp(app);
 
 const server = app.listen(port, () => {
-    console.log(`nutri-tiv-back API listening at: ${server.address().address}:${server.address().port}`);
+    console.log(`Recipe\'s Manager API listening at: ${server.address().address}:${server.address().port}`);
 
     console.timeEnd('[*] Booting');
     process.on('SIGINT', () => {
