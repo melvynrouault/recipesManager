@@ -1,4 +1,4 @@
-# recipe&#39;sManager
+# recipesmanager
 
 > Recipe&#39;s Manager
 

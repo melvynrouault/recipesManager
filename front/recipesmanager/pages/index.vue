@@ -3,7 +3,7 @@
     <div>
       <logo />
       <h1 class="title">
-        recipe&#39;sManager
+        recipesmanager
       </h1>
       <h2 class="subtitle">
         Recipe&#39;s Manager
