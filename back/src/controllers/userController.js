@@ -34,7 +34,6 @@ export const deleteUser = async function (req, res) {
 }
 
 export const getInfosUser = async (req, res) => {
-    console.log(`PARAMS : ${JSON.stringify(req.params)}`);
     if (!req.params.id) return throwBadRequest('Missing parameters', res);
     await UserModel.getUser(req.params.id, (err, result) => {
         if (err) return throwIntServerError(err, res);

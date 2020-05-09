@@ -10,6 +10,7 @@ import Xlog from '../xdk/Xlog';
 import logger from '../tools/logger';
 
 import * as userController from '../controllers/userController';
+import * as recipeController from '../controllers/recipeController';
 
 import { update } from 'ddos/lib';
 
@@ -46,6 +47,14 @@ function configRouter() {
     router.route('/user/:id')
         .get(logger, userController.getInfosUser)
         .put(logger, userController.editInfosUser);
+
+    router.route('/recette')
+        .post(logger, recipeController.addRecipe);
+
+    router.route('/recette/:id')
+        .get(logger, recipeController.getOneRecipe)
+        .put(logger, recipeController.editOneRecipe)
+        .delete(logger, recipeController.deleteRecipe);
 
     app.use(router);
 }
