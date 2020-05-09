@@ -1,43 +1,61 @@
 const mongoose = require('mongoose');
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
 
 const RecipeSchema = new mongoose.Schema({
-    recipeName: {
+    name: {
         type: String,
         required: true,
         maxLength: 254,
-        unique: false,
+        unique: true,
+        required: true,
     },
-    recipeNote: {
-        type: Float32Array,
-        maxlength: 1,
+    description: {
+        type: String,
+        maxlength: 254,
         unique: false,
+        required: true,
     },
-    recipeDificulty: {
-        type: Float32Array,
-        maxlength: 1,
+    ingredients: {
+        type: [String, Number],
+    },
+    note: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
+    difficulty: {
+        type: Number,
         unique: false,
+        required: true,
     },
-    recipeTime: {
+    duration: {
       type: Number,
-      maxlength: 3,
       unique: false,
+      required: true,
     },
+    pictures: {
+        type: [String],
+    },
+    isPublic: {
+        type: Boolean,
+        default: false,
+    }
 });
 
 // CRUD USER
 
-UserSchema.statics.createUser = async function(firstName, lastName, userEmail, userPswd, cb) {
-    if (!userEmail || !userPswd) return ;
-    const hashedSecret = await bcrypt.hash(userPswd, 10);
-    let user = await this.findOne({ userEmail })
-    if (user) return cb(new Error('User already exists'));
-    await this.model('User').create({
-        firstName,
-        lastName,
-        userEmail,
-        userPswd: hashedSecret,
+RecipeSchema.statics.createRecipe = async function(name, description, ingredients, note, difficulty, duration, pictures, isPublic, cb) {
+    if (!name || !description || !ingredients || !note || !difficulty || !duration || !pictures || !isPublic) return ;
+    let recipe = await this.findOne({ name })
+    if (recipe) return cb(new Error('Recipe already exists'));
+    await this.model('Recipe').create({
+        name,
+        description,
+        ingredients,
+        note,
+        difficulty,
+        duration,
+        pictures,
+        isPublic
     }, (err, record) => {
         if (err) return cb(err);
         return cb(null, record);
@@ -45,46 +63,29 @@ UserSchema.statics.createUser = async function(firstName, lastName, userEmail, u
     return null;
 };
 
-UserSchema.statics.getUser = async function (_id, cb) {
-    await this.findOne({ _id }, async (err, user) => {
+RecipeSchema.statics.getRecipe = async function (_id, cb) {
+    await this.findOne({ _id }, async (err, recipe) => {
         if (err) return cb(err);
-        if (!user) return cb(new Error('User not found'));
-        return cb(null, user);
+        if (!recipe) return cb(new Error('Recipe not found'));
+        return cb(null, recipe);
     });
 }
 
 
-UserSchema.statics.updateUser = async function (_id, firstName,  lastName, userEmail, cb) {
-    await this.findOneAndUpdate({ _id }, { firstName, lastName, userEmail }, { new: true }, async (err, user) => {
+RecipeSchema.statics.updateRecipe = async function (_id, name, description, ingredients, note, difficulty, duration, pictures, isPublic, cb) {
+    await this.findOneAndUpdate({ _id }, { name, description, ingredients, note, difficulty, duration, pictures, isPublic, }, { new: true }, async (err, recipe) => {
         if (err) return cb(err);
-        if (!user) return cb(new Error('User not found'));
-        return cb(null, user);
+        if (!recipe) return cb(new Error('Recipe not found'));
+        return cb(null, recipe);
     });
 }
 
-UserSchema.statics.deleteUser = async function(_id, cb) {
-    await this.model('User').deleteOne({ _id }, (err, user) => {
+RecipeSchema.statics.deleteRecipe = async function(_id, cb) {
+    await this.model('Recipe').deleteOne({ _id }, (err, recipe) => {
         if (err) return cb(err);
-        return cb(null, user);
+        return cb(null, recipe);
     });
 }
 
-// LOG USER
-UserSchema.statics.fetchUser = async function (userEmail, userPswd, cb) {
-    await this.findOne({ userEmail }, async (err, user) => {
-        if (err) return cb(err);
-        if(!user) return cb(new Error('user Not Found'));
-        const isValid = await bcrypt.compare(userPswd, user.userPswd);
-        const userId = user._id;
-        if(isValid === true) {
-            let token = jwt.sign({ id: userId, userEmail: userEmail, userPswd: userPswd }, secret, {expiresIn: 86400});
-            return cb(null, token);
-        } else {
-            return cb(new Error('Invalid Credentials'));
-        }
-    }).select('+userPswd');
-}
-
-
-const UserModel = mongoose.model('User', UserSchema);
-export default UserModel;
+const RecipeModel = mongoose.model('Recipe', RecipeSchema);
+export default RecipeModel;
