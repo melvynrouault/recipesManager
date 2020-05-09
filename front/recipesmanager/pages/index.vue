@@ -3,7 +3,7 @@
     <div>
       <Navbar/>
     </div>
-    <b-card-group columns class="body">
+    <b-card-group columns class="body col-md-12">
       <RecipeCardComponent/>
       <RecipeCardComponent/>
       <RecipeCardComponent/>

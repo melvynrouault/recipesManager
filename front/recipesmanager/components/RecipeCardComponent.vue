@@ -1,29 +1,31 @@
 <template>
-<div class="cardContainer">
-  <div class="cardHeader">
-    <p>Title</p>
-  </div>
-  <div class="cardBody">
-    <div class="difficulty">
-      <img src="../assets/img/muscle.png" alt="" class="iconsCardBody">
-      <p>2/5 </p>
+<div class="col-md-3">
+  <div class="cardContainer">
+    <div class="cardHeader">
+      <p>Title</p>
     </div>
-    <div class="rate">
-      <img src="../assets/img/star.png" alt="" class="iconsCardBody">
-      <p>4.5/5 </p>
+    <div class="cardBody">
+      <div class="difficulty">
+        <img src="../assets/img/muscle.png" alt="" class="iconsCardBody">
+        <p>2/5 </p>
+      </div>
+      <div class="rate">
+        <img src="../assets/img/star.png" alt="" class="iconsCardBody">
+        <p>4.5/5 </p>
+      </div>
+      <div class="duration">
+        <img src="../assets/img/duration.png" alt="" class="iconsCardBody">
+        <p>30 min </p>
+      </div>
+      <div class="price">
+        <img src="../assets/img/price.png" alt="" class="iconsCardBody">
+        <p>5€</p>
+      </div>
+      <hr>
     </div>
-    <div class="duration">
-      <img src="../assets/img/duration.png" alt="" class="iconsCardBody">
-      <p>30 min </p>
+    <div class="cardFooter">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti pariatur modi itaque dolorem soluta rem magni eos repellat suscipit laboriosam, adipisci dolore minima, enim illum aspernatur voluptatum dignissimos impedit minus?</p>
     </div>
-    <div class="price">
-      <img src="../assets/img/price.png" alt="" class="iconsCardBody">
-      <p>5€</p>
-    </div>
-    <hr>
-  </div>
-  <div class="cardFooter">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti pariatur modi itaque dolorem soluta rem magni eos repellat suscipit laboriosam, adipisci dolore minima, enim illum aspernatur voluptatum dignissimos impedit minus?</p>
   </div>
 </div>
   <!-- <b-card img-src="~/assets/img/ramen.jpg" img-alt="ramen" class="ramenImg" img-top>
