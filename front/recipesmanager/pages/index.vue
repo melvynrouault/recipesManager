@@ -3,6 +3,7 @@
     <div>
       <Navbar/>
     </div>
+    
       <div class="row">
         <RecipeCardComponent/>
         <RecipeCardComponent/>
@@ -14,6 +15,7 @@
         <RecipeCardComponent/>
         <RecipeCardComponent/>
       </div>
+
   </div>
 </template>
 
