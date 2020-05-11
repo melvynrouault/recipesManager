@@ -1,0 +1,99 @@
+<template>
+  <header>
+    <div>
+      <h1>Recipe's Manager !</h1>
+      <small>“Le gout des bonnes chose”</small>
+    </div>
+    <div class="navBar">  
+      <ul class="nav">
+        <li>
+          <nuxt-link to="">
+            <img src="~/assets/img/myRecipes.png" alt="My recipes" class="imgNav">
+            <span>My Recipes</span>
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="">
+            <img src="~/assets/img/myAccount.png" alt="My account" class="imgNav">
+            <span>My Account</span>
+          </nuxt-link>
+        </li>
+        <li>
+          <span class="content_search">
+            <input aria-label="Input" id="inputFormNav" placeholder="Search...">
+            <button type="submit" id="buttonNav">
+              <img src="~/assets/img/search.png" alt="search" id="searchNav">
+            </button>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </header>
+</template>
+
+
+<style lang="scss">
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+  small{
+    font-size: 1.4rem;
+    color: #356869;
+    font-style: italic;
+    margin-left: .8rem;
+  }
+  h1 {
+    font-size: 5rem;
+    color: #356869;
+    margin-bottom: .8rem;
+  }
+  .nav {
+    display: inline-flex;
+    a {
+      color: #356869 ;
+    }
+    li {
+      text-align: center;
+      &:not(:last-child){
+        margin-right: 4.8rem;
+      }
+    }
+    li  span {
+      display: block;
+      font-size: 2rem;
+    }
+  }
+}
+.imgNav {
+  width: 5rem;
+  height: 5rem;
+}
+.content_search {
+  padding: 2rem 0;
+  position: relative;
+}
+#buttonNav {
+  border: none;
+  background: none;
+  position: absolute;
+  right: .5rem;
+  outline: none;
+}
+#searchNav {
+  width: 3.5rem;
+  height: 3.5rem;
+  filter: brightness(5);
+}
+#inputFormNav {
+  border-radius: 2rem;
+  border: none;
+  background-color: #FD5523;
+  color: #FFFBE6;
+  height: 4rem;
+  width: 35rem;
+  outline: none;
+  padding: .8rem 1.6rem;
+}
+</style>
