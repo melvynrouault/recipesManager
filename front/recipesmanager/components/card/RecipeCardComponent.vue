@@ -4,7 +4,7 @@
     <div class="cardHeader">
       <p>{{ name }}</p>
       <figure>
-        <img :src="require(`@/assets/img/${imgUrl}.jpg`)" :alt="name">
+        <img class="img_card" :src="require(`@/assets/img/${imgUrl}.jpg`)" :alt="name">
       </figure>
     </div>
     <div class="cardBody">
@@ -24,7 +24,6 @@
         <img src="../../assets/img/price.png" alt="" class="iconsCardBody">
         <p>{{ globalPrice }}</p>
       </div>
-      <hr>
     </div>
     <div class="cardFooter">
       <p>{{ descrip }}</p>
@@ -71,26 +70,74 @@ export default {
 <style lang="scss">
 
 .cardContainer {
-  background-color: #35686988;
+  background-color: #3568697a;
+  margin-bottom: 2.5rem;
+  p {
+    color: #fff;
+  }
+  &:hover {
+    .img_card{
+      transform: scale(1.2);
+    }
+  }
 }
+
+.cardHeader p,
+.cardBody,
+.cardFooter {
+  padding: .8rem;
+}
+
 .cardHeader {
+  .img_card {
+    transition: .1s ease all;
+  }
   p{
     font-weight: bold;
     font-size:2.1rem;
   }
-}
-.cardContainer p {
-  color: white;
+  p, figure {
+    margin-bottom: 0;
+    overflow: hidden;
+  }
 }
 
+.cardBody {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+  font-size: 1.2rem;
+  & > div {
+    width: 25%;
+    img {
+      vertical-align: bottom;
+      margin-right: .4rem;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    & > img, p{
+      display: inline-flex;
+    }
+  }
+  &:after {
+    content:'';
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    bottom: 0;
+    left:0;
+    right: 0;
+    width: 85%;
+    height: 1px;
+    background-color:#FD5523;
+  }
+}
 .iconsCardBody {
-  height: 25px;
-  width: 25px;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
-.difficulty, .rate, .duration, .price {
-  margin-left: 7%;
-  display: inline-flex;
-}
 
 </style>
