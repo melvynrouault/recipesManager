@@ -1,6 +1,7 @@
 <template>
 <div class="col-md-4 col-lg-3 col-sm-12">
   <div class="cardContainer">
+    <nuxt-link :to=" '/recipe/' + name">
     <div class="cardHeader">
       <p>{{ name }}</p>
       <figure>
@@ -28,7 +29,8 @@
     <div class="cardFooter">
       <p>{{ descrip }}</p>
     </div>
-  </div>  
+    </nuxt-link>
+  </div>
 </div>
 
 </template>
@@ -72,6 +74,9 @@ export default {
 .cardContainer {
   background-color: #3568697a;
   margin-bottom: 2.5rem;
+  a {
+    text-decoration: none;
+  }
   p {
     color: #fff;
   }
