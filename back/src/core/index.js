@@ -40,7 +40,6 @@ function configRouter() {
     router.route('/login')
         .post(logger, userController.logUser);
     
-
     router.route('/user/delete')
         .delete(logger, userController.deleteUser);
 
