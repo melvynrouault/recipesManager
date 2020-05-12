@@ -15,7 +15,7 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/">
+          <nuxt-link to="/myAccount">
             <img src="~/assets/img/myAccount.png" alt="My account" class="imgNav">
             <span>My Account</span>
           </nuxt-link>
