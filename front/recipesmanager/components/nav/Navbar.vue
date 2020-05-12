@@ -1,7 +1,9 @@
 <template>
   <header>
     <div id="anim">
-      <h1>Recipe's Manager &nbsp;</h1>
+      <nuxt-link to="/">
+        <h1>Recipe's Manager &nbsp;</h1>
+      </nuxt-link>
       <small>“Le gout des bonnes chose”</small>
     </div>
     <div class="navBar">
@@ -13,7 +15,7 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/portail">
+          <nuxt-link to="/">
             <img src="~/assets/img/myAccount.png" alt="My account" class="imgNav">
             <span>My Account</span>
           </nuxt-link>
@@ -45,6 +47,9 @@ header {
     margin-left: .8rem;
   }
   #anim {
+    a{
+      text-decoration: none;
+    }
     h1 {
       font-size: 5rem;
       color: #356869;
