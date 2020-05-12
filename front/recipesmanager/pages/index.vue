@@ -11,6 +11,10 @@
         <RecipeCardComponent/>
         <RecipeCardComponent/>
       </div>
+      <div>
+        <!-- <pre>{{ getAllRecipes() }}</pre> -->
+        <p>{{ this.recettes }}</p>
+      </div>
   </div>
 </template>
 
@@ -19,9 +23,19 @@
 import RecipeCardComponent from '~/components/card/RecipeCardComponent.vue';
 
 export default {
+  data() {
+    return {
+      recettes: this.$store.getters['recette/getAllRecipes'],
+    }
+  },
+  
   components: {
     RecipeCardComponent,
-  }
+  },
+
+  created() {
+    this.$store.dispatch('recette/getAllRecipes');
+  },
 }
 </script>
 

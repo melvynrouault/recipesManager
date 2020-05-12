@@ -63,6 +63,14 @@ RecipeSchema.statics.createRecipe = async function(name, description, ingredient
     return null;
 };
 
+RecipeSchema.statics.getAllRecipes = async function (cb) {
+    await this.model('Recipe').find({}, async (err, recipes) => {
+        if (err) return cb(err);
+        if (!recipes) return cb(new Error('Recipes not found'));
+        return cb(null, recipes);
+      });
+}
+
 RecipeSchema.statics.getRecipe = async function (_id, cb) {
     await this.findOne({ _id }, async (err, recipe) => {
         if (err) return cb(err);

@@ -47,6 +47,9 @@ function configRouter() {
         .get(logger, userController.getInfosUser)
         .put(logger, userController.editInfosUser);
 
+    router.route('/recettes')
+        .get(logger, recipeController.getAllRecipes);
+
     router.route('/recette')
         .post(logger, recipeController.addRecipe);
 
