@@ -1,7 +1,17 @@
 <template>
   <div>
-    <pre>{{ getUser() }}</pre>
     <p>{{ this.user }}</p>
+    <h1>My Account</h1>
+    <div>
+      <div class="userInfos">
+        <p>Name: </p>
+        <p></p>
+      </div>
+      <div class="userInfos">
+        <p>Email: </p>
+        <p></p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -23,6 +33,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+  .userInfos {
+    & > p {
+      display: inline-block;
+    }
+  }
 </style>
