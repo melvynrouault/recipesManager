@@ -1,5 +1,8 @@
 
 module.exports = {
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3080'
+  },
   mode: 'universal',
   /*
   ** Headers of the page

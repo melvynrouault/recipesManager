@@ -40,13 +40,15 @@ function configRouter() {
     router.route('/login')
         .post(logger, userController.logUser);
     
-
     router.route('/user/delete')
         .delete(logger, userController.deleteUser);
 
     router.route('/user/:id')
         .get(logger, userController.getInfosUser)
         .put(logger, userController.editInfosUser);
+
+    router.route('/recettes')
+        .get(logger, recipeController.getAllRecipes);
 
     router.route('/recette')
         .post(logger, recipeController.addRecipe);
