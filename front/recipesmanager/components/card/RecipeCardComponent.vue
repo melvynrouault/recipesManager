@@ -82,7 +82,7 @@ export default {
   }
   &:hover {
     .img_card{
-      transform: scale(1.2);
+      transform: scale(1.2) translateZ(0);
     }
   }
 }
