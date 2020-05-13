@@ -5,7 +5,7 @@
     <div class="cardHeader">
       <p>{{ name }}</p>
       <figure>
-        <img class="img_card" :src="require(`@/assets/img/${imgUrl}.jpg`)" :alt="name">
+        <img class="img_card" :src="require(`@/assets/img/${imgUrl}`)" :alt="name">
       </figure>
     </div>
     <div class="cardBody">
@@ -40,11 +40,11 @@ export default {
   props: {
     name: {
       type: String,
-      default:'Ramen'
+      default:''
     },
     imgUrl: {
       type: String,
-      default: 'ramen'
+      default: 'ramen.jpg'
     },
     dificultyNote: {
       type: Number,
@@ -59,8 +59,8 @@ export default {
       default: 0
     },
     globalPrice: {
-      type: Number,
-      default: 0
+      type: String,
+      default: ''
     },
     descrip: {
       type: String,
@@ -72,13 +72,11 @@ export default {
 <style lang="scss">
 
 .cardContainer {
-  background-color: #3568697a;
+  background-color: #B9E4C9;
   margin-bottom: 2.5rem;
   a {
     text-decoration: none;
-  }
-  p {
-    color: #fff;
+    color: inherit;
   }
   &:hover {
     .img_card{

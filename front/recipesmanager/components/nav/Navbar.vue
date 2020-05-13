@@ -42,11 +42,11 @@ header {
   padding: 3rem 0;
   small{
     font-size: 1.4rem;
-    color: #356869;
     font-style: italic;
     margin-left: .8rem;
   }
   #anim {
+    margin-right: .8rem;
     a{
       text-decoration: none;
     }

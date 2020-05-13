@@ -1,18 +1,14 @@
 <template>
   <div>
       <div class="row">
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-      </div>
-      <div>
-        <p>{{ this.recettes }}</p>
+        <RecipeCardComponent v-for="recette of recettes" :key="recette._id"
+          :name="recette.name" 
+          :dificultyNote="recette.difficulty" 
+          :likeNote="recette.note"
+          :duration="recette.duration"
+          globalPrice="150"
+          :descrip="excerpt(recette.description)"
+        />
       </div>
   </div>
 </template>
@@ -25,6 +21,7 @@ export default {
   data() {
     return {
       recettes: {},
+      exerptDiscrip: ''
     }
   },
   components: {
@@ -34,9 +31,16 @@ export default {
     this.$store.dispatch('recette/getAllRecipes');
     setTimeout(() => { 
       this.recettes = this.$store.getters['recette/getAllRecipes'];
-    }, 0);
-    
+      console.log(this.recettes)
+    }, 50);
   },
+  methods: {
+    excerpt(chaine){
+      const words = chaine.split(' ', 30);
+      const returnWord = words.join(' ') + (chaine.length > 30 ? '...' : '');
+      return returnWord
+    }
+  }
 }
 </script>
 
