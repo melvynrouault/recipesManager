@@ -2,8 +2,8 @@ import {throwBadRequest,  sendOK, sendOKWithData, sendCreated, throwIntServerErr
 import RecipeModel from '../models/recipeModel';
 
 export const addRecipe = async (req, res) => {
-  if (!req.body.name || !req.body.description || !req.body.ingredients ||!req.body.note || !req.body.difficulty || !req.body.duration || !req.body.pictures || !req.body.isPublic) return throwBadRequest('Missing Parameters', res);
-  await RecipeModel.createRecipe(req.body.name, req.body.description, req.body.ingredients, req.body.note, req.body.difficulty, req.body.duration, req.body.pictures, req.body.isPublic, (err, record) => {
+  if (!req.body.name || !req.body.description || !req.body.ingredients || !req.body.price || !req.body.note || !req.body.difficulty || !req.body.duration || !req.body.pictures || !req.body.isPublic) return throwBadRequest('Missing Parameters', res);
+  await RecipeModel.createRecipe(req.body.name, req.body.description, req.body.ingredients, req.body.price,  req.body.note, req.body.difficulty, req.body.duration, req.body.pictures, req.body.isPublic, (err, record) => {
     if (err) return throwIntServerError(err, res);
     return sendCreated(record, res);
   });
