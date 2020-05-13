@@ -36,5 +36,19 @@ export const actions = {
       console.log(`[API CALL RECIPE] ERROR`, err.message);
       throw new Error(`${err}`);
     })
+  },
+  async getOneRecipe({commit}, {name}) {
+
+    let recipeName = name;
+    console.log('NAME: ' + recipeName)
+    await axios.get(process.env.baseUrl + `/recette/${recipeName}`)
+    .then((response) => {
+      console.log('[API CAL ONE RECIPE]')
+      commit('SET_ONE_RECIPE', response.data);
+      })
+      .catch(err => {
+        console.log(`[API CALL ON RECIPE] ERROR`, err.message);
+        throw new Error(`${err}`);
+    })
   }
 }
