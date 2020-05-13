@@ -9,6 +9,13 @@ export const addRecipe = async (req, res) => {
   });
 }
 
+export const getAllRecipes = async (req, res) => {
+  await RecipeModel.getAllRecipes((err, recipes) => {
+    if (err) return throwNotFound(err, res);
+    return sendOKWithData(recipes, res);
+  });
+}
+
 export const getOneRecipe = async (req, res) => {
   if (!req.params.name) return throwBadRequest('Missing Parameters', res);
   await RecipeModel.getRecipe(req.params.name, (err, result) => {

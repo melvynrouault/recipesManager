@@ -1,5 +1,8 @@
 
 module.exports = {
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3080'
+  },
   mode: 'universal',
   /*
   ** Headers of the page
@@ -23,6 +26,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '~/assets/style.css'
   ],
   /*
   ** Plugins to load before mounting the App
