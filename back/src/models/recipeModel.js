@@ -15,7 +15,16 @@ const RecipeSchema = new mongoose.Schema({
         required: true,
     },
     ingredients: {
-        type: [String, Number],
+        name: {
+            type: [String],
+            maxLength: 254,
+        },
+        quantity: {
+            type: [Number],
+        }
+    },
+    price: {
+        type: Number,
     },
     note: {
         type: Number,
@@ -43,14 +52,15 @@ const RecipeSchema = new mongoose.Schema({
 
 // CRUD USER
 
-RecipeSchema.statics.createRecipe = async function(name, description, ingredients, note, difficulty, duration, pictures, isPublic, cb) {
-    if (!name || !description || !ingredients || !note || !difficulty || !duration || !pictures || !isPublic) return ;
+RecipeSchema.statics.createRecipe = async function(name, description, ingredients, price, note, difficulty, duration, pictures, isPublic, cb) {
+    if (!name || !description || !ingredients || !price || !note || !difficulty || !duration || !pictures || !isPublic) return ;
     let recipe = await this.findOne({ name })
     if (recipe) return cb(new Error('Recipe already exists'));
     await this.model('Recipe').create({
         name,
         description,
         ingredients,
+        price,
         note,
         difficulty,
         duration,
@@ -71,8 +81,8 @@ RecipeSchema.statics.getAllRecipes = async function (cb) {
       });
 }
 
-RecipeSchema.statics.getRecipe = async function (_id, cb) {
-    await this.findOne({ _id }, async (err, recipe) => {
+RecipeSchema.statics.getRecipe = async function (name, cb) {
+    await this.findOne({ name }, async (err, recipe) => {
         if (err) return cb(err);
         if (!recipe) return cb(new Error('Recipe not found'));
         return cb(null, recipe);
@@ -80,8 +90,8 @@ RecipeSchema.statics.getRecipe = async function (_id, cb) {
 }
 
 
-RecipeSchema.statics.updateRecipe = async function (_id, name, description, ingredients, note, difficulty, duration, pictures, isPublic, cb) {
-    await this.findOneAndUpdate({ _id }, { name, description, ingredients, note, difficulty, duration, pictures, isPublic, }, { new: true }, async (err, recipe) => {
+RecipeSchema.statics.updateRecipe = async function (name, description, price, ingredients, note, difficulty, duration, pictures, isPublic, cb) {
+    await this.findOneAndUpdate({ name }, { name, description, ingredients, price, note, difficulty, duration, pictures, isPublic, }, { new: true }, async (err, recipe) => {
         if (err) return cb(err);
         if (!recipe) return cb(new Error('Recipe not found'));
         return cb(null, recipe);

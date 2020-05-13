@@ -2,8 +2,8 @@ import {throwBadRequest,  sendOK, sendOKWithData, sendCreated, throwIntServerErr
 import RecipeModel from '../models/recipeModel';
 
 export const addRecipe = async (req, res) => {
-  if (!req.body.name || !req.body.description || !req.body.ingredients ||!req.body.note || !req.body.difficulty || !req.body.duration || !req.body.pictures || !req.body.isPublic) return throwBadRequest('Missing Parameters', res);
-  await RecipeModel.createRecipe(req.body.name, req.body.description, req.body.ingredients, req.body.note, req.body.difficulty, req.body.duration, req.body.pictures, req.body.isPublic, (err, record) => {
+  if (!req.body.name || !req.body.description || !req.body.ingredients || !req.body.price || !req.body.note || !req.body.difficulty || !req.body.duration || !req.body.pictures || !req.body.isPublic) return throwBadRequest('Missing Parameters', res);
+  await RecipeModel.createRecipe(req.body.name, req.body.description, req.body.ingredients, req.body.price,  req.body.note, req.body.difficulty, req.body.duration, req.body.pictures, req.body.isPublic, (err, record) => {
     if (err) return throwIntServerError(err, res);
     return sendCreated(record, res);
   });
@@ -17,8 +17,8 @@ export const getAllRecipes = async (req, res) => {
 }
 
 export const getOneRecipe = async (req, res) => {
-  if (!req.params.id) return throwBadRequest('Missing Parameters', res);
-  await RecipeModel.getRecipe(req.params.id, (err, result) => {
+  if (!req.params.name) return throwBadRequest('Missing Parameters', res);
+  await RecipeModel.getRecipe(req.params.name, (err, result) => {
     if (err) return throwIntServerError(err, res);
     return sendOKWithData({
       _id: result._id,

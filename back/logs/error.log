@@ -7,3 +7,8 @@
 [ERR] 2020-05-09T15:25:09.664Z-[xdk:XresHandler] | Missing Parameters
 [ERR] 2020-05-09T15:25:31.213Z-[xdk:XresHandler] | Missing Parameters
 [ERR] 2020-05-09T15:26:47.143Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-13T12:03:16.269Z-[xdk:XresHandler] | Error: Recipe already exists
+[ERR] 2020-05-13T12:12:49.614Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "fajitas" at path "_id" for model "Recipe"
+[ERR] 2020-05-13T12:26:40.271Z-[xdk:XresHandler] | Error: Recipe already exists
+[ERR] 2020-05-13T12:28:10.760Z-[xdk:XresHandler] | ValidationError: ingredients.quantity: Cast to Array failed for value "2, 0.5" at path "ingredients.quantity"
+[ERR] 2020-05-13T12:28:37.213Z-[xdk:XresHandler] | ValidationError: ingredients.quantity: Cast to Array failed for value "2, 5" at path "ingredients.quantity"
