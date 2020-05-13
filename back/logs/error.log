@@ -30,3 +30,11 @@
 [ERR] 2020-05-13T12:45:44.088Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "Boeuf bourgignon" at path "_id" for model "Recipe"
 [ERR] 2020-05-13T13:06:22.140Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "Couscous" at path "_id" for model "Recipe"
 [ERR] 2020-05-13T13:07:29.546Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "tartiflette" at path "_id" for model "Recipe"
+[ERR] 2020-05-13T13:27:22.214Z-[xdk:XresHandler] | Error: User not found
+[ERR] 2020-05-13T14:12:06.366Z-[xdk:XresHandler] | Error: User not found
+[ERR] 2020-05-13T14:12:31.787Z-[xdk:XresHandler] | Error: User not found
+[ERR] 2020-05-13T14:48:59.931Z-[xdk:XresHandler] | Error: User not found
+[ERR] 2020-05-13T14:49:04.448Z-[xdk:XresHandler] | Error: User not found
+[ERR] 2020-05-13T15:46:14.082Z-[xdk:XresHandler] | Error: User not found
+[ERR] 2020-05-13T16:12:28.681Z-[xdk:XresHandler] | Error: User not found
+[ERR] 2020-05-13T16:12:32.251Z-[xdk:XresHandler] | Error: User not found

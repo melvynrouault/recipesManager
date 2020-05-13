@@ -7,7 +7,7 @@
           :likeNote="recette.note"
           :duration="recette.duration"
           globalPrice="150"
-          :descrip="recette.description"
+          :descrip="excerpt(recette.description)"
         />
       </div>
   </div>
@@ -21,6 +21,7 @@ export default {
   data() {
     return {
       recettes: {},
+      exerptDiscrip: ''
     }
   },
   components: {
@@ -30,8 +31,16 @@ export default {
     this.$store.dispatch('recette/getAllRecipes');
     setTimeout(() => { 
       this.recettes = this.$store.getters['recette/getAllRecipes'];
+      console.log(this.recettes)
     }, 50);
   },
+  methods: {
+    excerpt(chaine){
+      const words = chaine.split(' ', 30);
+      const returnWord = words.join(' ') + (chaine.length > 30 ? '...' : '');
+      return returnWord
+    }
+  }
 }
 </script>
 

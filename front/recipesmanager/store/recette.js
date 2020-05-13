@@ -24,6 +24,7 @@ export const mutations = {
 }
 
 export const actions = {
+
   async getAllRecipes({commit}) {
     await axios.get(process.env.baseUrl + '/recettes')
     .then((response) => {

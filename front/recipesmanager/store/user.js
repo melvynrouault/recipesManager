@@ -1,3 +1,6 @@
+import jwt from 'jsonwebtoken';
+import axios from 'axios';
+
 export const state = {
   user: {},
 }
