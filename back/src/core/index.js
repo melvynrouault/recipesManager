@@ -51,7 +51,7 @@ function configRouter() {
     router.route('/recette')
         .post(logger, recipeController.addRecipe);
 
-    router.route('/recette/:id')
+    router.route('/recette/:name')
         .get(logger, recipeController.getOneRecipe)
         .put(logger, recipeController.editOneRecipe)
         .delete(logger, recipeController.deleteRecipe);

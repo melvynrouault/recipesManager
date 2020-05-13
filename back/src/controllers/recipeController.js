@@ -10,8 +10,8 @@ export const addRecipe = async (req, res) => {
 }
 
 export const getOneRecipe = async (req, res) => {
-  if (!req.params.id) return throwBadRequest('Missing Parameters', res);
-  await RecipeModel.getRecipe(req.params.id, (err, result) => {
+  if (!req.params.name) return throwBadRequest('Missing Parameters', res);
+  await RecipeModel.getRecipe(req.params.name, (err, result) => {
     if (err) return throwIntServerError(err, res);
     return sendOKWithData({
       _id: result._id,

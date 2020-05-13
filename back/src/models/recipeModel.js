@@ -15,7 +15,14 @@ const RecipeSchema = new mongoose.Schema({
         required: true,
     },
     ingredients: {
-        type: [String, Number],
+        type: Array,
+        name: {
+            type: [String],
+            maxLength: 254,
+        },
+        quantity: {
+            type: [Number],
+        }
     },
     price: {
         type: Number,
@@ -67,8 +74,8 @@ RecipeSchema.statics.createRecipe = async function(name, description, ingredient
     return null;
 };
 
-RecipeSchema.statics.getRecipe = async function (_id, cb) {
-    await this.findOne({ _id }, async (err, recipe) => {
+RecipeSchema.statics.getRecipe = async function (name, cb) {
+    await this.findOne({ name }, async (err, recipe) => {
         if (err) return cb(err);
         if (!recipe) return cb(new Error('Recipe not found'));
         return cb(null, recipe);
@@ -76,8 +83,8 @@ RecipeSchema.statics.getRecipe = async function (_id, cb) {
 }
 
 
-RecipeSchema.statics.updateRecipe = async function (_id, name, description, price, ingredients, note, difficulty, duration, pictures, isPublic, cb) {
-    await this.findOneAndUpdate({ _id }, { name, description, ingredients, price, note, difficulty, duration, pictures, isPublic, }, { new: true }, async (err, recipe) => {
+RecipeSchema.statics.updateRecipe = async function (name, description, price, ingredients, note, difficulty, duration, pictures, isPublic, cb) {
+    await this.findOneAndUpdate({ name }, { name, description, ingredients, price, note, difficulty, duration, pictures, isPublic, }, { new: true }, async (err, recipe) => {
         if (err) return cb(err);
         if (!recipe) return cb(new Error('Recipe not found'));
         return cb(null, recipe);
