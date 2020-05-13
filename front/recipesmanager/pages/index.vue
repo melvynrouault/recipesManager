@@ -1,18 +1,14 @@
 <template>
   <div>
       <div class="row">
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-        <RecipeCardComponent/>
-      </div>
-      <div>
-        <p>{{ this.recettes }}</p>
+        <RecipeCardComponent v-for="recette of recettes" :key="recette._id"
+          :name="recette.name" 
+          :dificultyNote="recette.difficulty" 
+          :likeNote="recette.note"
+          :duration="recette.duration"
+          globalPrice="150"
+          :descrip="recette.description"
+        />
       </div>
   </div>
 </template>
@@ -35,7 +31,6 @@ export default {
     setTimeout(() => { 
       this.recettes = this.$store.getters['recette/getAllRecipes'];
     }, 0);
-    
   },
 }
 </script>
