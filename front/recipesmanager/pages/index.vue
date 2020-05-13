@@ -30,7 +30,7 @@ export default {
     this.$store.dispatch('recette/getAllRecipes');
     setTimeout(() => { 
       this.recettes = this.$store.getters['recette/getAllRecipes'];
-    }, 0);
+    }, 50);
   },
 }
 </script>

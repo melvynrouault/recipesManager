@@ -29,3 +29,4 @@
 [ERR] 2020-05-13T12:45:12.053Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "Boeuf bourgignon" at path "_id" for model "Recipe"
 [ERR] 2020-05-13T12:45:44.088Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "Boeuf bourgignon" at path "_id" for model "Recipe"
 [ERR] 2020-05-13T13:06:22.140Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "Couscous" at path "_id" for model "Recipe"
+[ERR] 2020-05-13T13:07:29.546Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "tartiflette" at path "_id" for model "Recipe"

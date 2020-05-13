@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ name }}
+    {{ recette.name }}
   </div>
 </template>
 
@@ -13,11 +13,10 @@ export default {
     }
   },
   mounted() {
-    this.$store.dispatch('recette/getOneRecipe', {name : this.$route.params.name});
+    this.$store.dispatch('recette/getOneRecipe', {name : this.name});
     setTimeout(() => { 
       this.recette = this.$store.getters['recette/getOneRecipe'];
-      console.log('CALL' + this.recette)
-    }, 0);
+    }, 50);
   },
 }
 </script>
