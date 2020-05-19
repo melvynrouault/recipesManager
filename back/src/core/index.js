@@ -11,6 +11,7 @@ import logger from '../tools/logger';
 
 import * as userController from '../controllers/userController';
 import * as recipeController from '../controllers/recipeController';
+import * as itemController from '../controllers/itemController';
 
 import { update } from 'ddos/lib';
 
@@ -57,6 +58,18 @@ function configRouter() {
         .get(logger, recipeController.getOneRecipe)
         .put(logger, recipeController.editOneRecipe)
         .delete(logger, recipeController.deleteRecipe);
+
+    /** ITEM */
+    router.route('/item/new')
+       .post(logger, itemController.addItem);
+
+    router.route('/item/:name')
+        .get(logger, itemController.getOneItem)
+        .put(logger, itemController.editInfosItem)
+        .delete(logger, itemController.deleteItem);
+
+    router.route('/items')
+    .get(logger, itemController.getAllItems);
 
     app.use(router);
 }

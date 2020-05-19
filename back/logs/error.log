@@ -38,3 +38,62 @@
 [ERR] 2020-05-13T15:46:14.082Z-[xdk:XresHandler] | Error: User not found
 [ERR] 2020-05-13T16:12:28.681Z-[xdk:XresHandler] | Error: User not found
 [ERR] 2020-05-13T16:12:32.251Z-[xdk:XresHandler] | Error: User not found
+[ERR] 2020-05-18T17:47:31.527Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "item" at path "_id" for model "User"
+[ERR] 2020-05-18T18:04:05.531Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "item" at path "_id" for model "User"
+[ERR] 2020-05-18T18:04:51.625Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "recipe" at path "_id" for model "User"
+[ERR] 2020-05-18T18:05:00.162Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "item" at path "_id" for model "User"
+[ERR] 2020-05-18T18:39:54.656Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-18T18:40:06.654Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-18T18:41:23.670Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-18T18:49:13.139Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T18:50:53.281Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T18:56:03.977Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-18T18:58:39.435Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "items" at path "_id" for model "User"
+[ERR] 2020-05-18T18:58:45.373Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "items" at path "_id" for model "User"
+[ERR] 2020-05-18T18:59:00.150Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "items" at path "_id" for model "User"
+[ERR] 2020-05-18T19:00:46.330Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "items" at path "_id" for model "User"
+[ERR] 2020-05-18T19:00:49.177Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "items" at path "_id" for model "User"
+[ERR] 2020-05-18T19:02:20.094Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "items" at path "_id" for model "User"
+[ERR] 2020-05-18T19:02:38.351Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "items" at path "_id" for model "User"
+[ERR] 2020-05-18T19:07:26.172Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:07:42.970Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:07:50.958Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:11:57.220Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:12:27.068Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:12:32.487Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:12:35.463Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:12:37.856Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:15:09.041Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:15:27.383Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:24:11.847Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:24:15.590Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-18T19:28:39.549Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value ":name" at path "_id" for model "Item"
+[ERR] 2020-05-18T19:38:30.407Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value ":name" at path "_id" for model "Item"
+[ERR] 2020-05-18T19:39:40.079Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value ":name" at path "_id" for model "Item"
+[ERR] 2020-05-18T19:39:44.113Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value ":name" at path "_id" for model "Item"
+[ERR] 2020-05-18T19:41:06.159Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-18T19:41:11.914Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-18T19:41:40.857Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-18T19:43:16.345Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-18T19:43:18.186Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-18T20:30:34.601Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T17:41:11.690Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T17:41:26.472Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-19T17:44:17.681Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-19T17:44:24.248Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T18:58:37.617Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T19:12:16.677Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T19:12:56.865Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T19:13:13.684Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T19:13:24.636Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-19T19:14:19.876Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-19T19:14:26.068Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-19T19:18:56.974Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T19:20:51.154Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T19:40:59.226Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T19:41:13.818Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T19:43:59.945Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T19:44:19.788Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-19T20:09:45.977Z-[xdk:XresHandler] | MongoError: E11000 duplicate key error collection: recipesManager-dev.items index: name_1 dup key: { name: "PatateDouce" }
+[ERR] 2020-05-19T20:10:11.809Z-[xdk:XresHandler] | Error: Item already exists
+[ERR] 2020-05-19T20:11:04.256Z-[xdk:XresHandler] | Error: Item not found

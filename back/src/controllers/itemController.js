@@ -9,19 +9,10 @@ export const addItem = async (req, res) => {
         return sendCreated(record, res);
     });
 };
-
-export const deleteItem = async function (req, res) {
-    if (!req.body._id) return throwBadRequest('Missing parameters', res);
-    await ItemModel.deleteItem(req.body._id, (err, result) => {
-        if (err) return throwIntServerError(err, res);
-        return sendOK(res);
-    })
-}
-
-export const getInfosItem = async (req, res) => {
-    console.log(`PARAMS : ${JSON.stringify(req.params)}`);
-    if (!req.params.id) return throwBadRequest('Missing parameters', res);
-    await ItemModel.getItem(req.params.id, (err, result) => {
+  
+export const getOneItem = async (req, res) => {
+    if (!req.params.name) return throwBadRequest('Missing parameters', res);
+    await ItemModel.getItem(req.params.name, (err, result) => {
         if (err) return throwIntServerError(err, res);
         return sendOKWithData({
             _id: result._id,
@@ -29,7 +20,7 @@ export const getInfosItem = async (req, res) => {
             price: result.price,
         }, res)
     })
-}
+  }
 
 export const editInfosItem = async (req, res) => {
     if (!req.params.id || !req.body.name || !req.body.price) return throwBadRequest('Missing parameters', res);
@@ -43,3 +34,18 @@ export const editInfosItem = async (req, res) => {
     });
     return null;
 }
+
+export const deleteItem = async function (req, res) {
+    if (!req.body.name) return throwBadRequest('Missing parameters', res);
+    await ItemModel.deleteItem(req.body.name, (err, result) => {
+        if (err) return throwIntServerError(err, res);
+        return sendOK(res);
+    })
+}
+
+export const getAllItems = async (req, res) => {
+    await ItemModel.getAllItems((err, items) => {
+      if (err) return throwNotFound(err, res);
+      return sendOKWithData(items, res);
+    });
+  }

@@ -1,0 +1,274 @@
+[BOOT] 2020-05-09T13:26:59.409Z-[core:index] | successfully connected to the mongoDb Server
+[BOOT] 2020-05-18T17:35:38.450Z-[core:index] | successfully connected to the mongoDb Server
+[BOOT] 2020-05-18T17:36:37.580Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-18T17:47:31.517Z-[tools:logger] | GET /user/item
+[INFO] 2020-05-18T17:47:31.516Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T17:47:31.518Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T17:47:34.896Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T17:47:34.897Z-[tools:logger] | GET /
+[INFO] 2020-05-18T17:47:34.898Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T17:50:43.631Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T17:50:43.634Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T17:50:43.633Z-[tools:logger] | GET /
+[INFO] 2020-05-18T18:04:05.519Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:04:05.522Z-[tools:logger] | GET /user/item
+[INFO] 2020-05-18T18:04:05.524Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T18:04:51.622Z-[tools:logger] | GET /user/recipe
+[INFO] 2020-05-18T18:04:51.619Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:04:51.623Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T18:05:00.157Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:05:00.159Z-[tools:logger] | GET /user/item
+[INFO] 2020-05-18T18:05:00.160Z-[tools:logger] | Body: {}
+[BOOT] 2020-05-18T18:39:19.002Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-18T18:39:54.651Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:39:54.654Z-[tools:logger] | POST /user/item/new
+[INFO] 2020-05-18T18:39:54.655Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T18:40:06.652Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:40:06.653Z-[tools:logger] | POST /user/item/new
+[INFO] 2020-05-18T18:40:06.653Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T18:41:23.667Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:41:23.668Z-[tools:logger] | POST /user/item/new
+[INFO] 2020-05-18T18:41:23.669Z-[tools:logger] | Body: {"query":"\n    query IntrospectionQuery {\n      __schema {\n        queryType { name }\n        mutationType { name }\n        subscriptionType { name }\n        types {\n          ...FullType\n        }\n        directives {\n          name\n          description\n          locations\n          args {\n            ...InputValue\n          }\n        }\n      }\n    }\n\n    fragment FullType on __Type {\n      kind\n      name\n      description\n      fields(includeDeprecated: true) {\n        name\n        description\n        args {\n          ...InputValue\n        }\n        type {\n          ...TypeRef\n        }\n        isDeprecated\n        deprecationReason\n      }\n      inputFields {\n        ...InputValue\n      }\n      interfaces {\n        ...TypeRef\n      }\n      enumValues(includeDeprecated: true) {\n        name\n        description\n        isDeprecated\n        deprecationReason\n      }\n      possibleTypes {\n        ...TypeRef\n      }\n    }\n\n    fragment InputValue on __InputValue {\n      name\n      description\n      type { ...TypeRef }\n      defaultValue\n    }\n\n    fragment TypeRef on __Type {\n      kind\n      name\n      ofType {\n        kind\n        name\n        ofType {\n          kind\n          name\n          ofType {\n            kind\n            name\n            ofType {\n              kind\n              name\n              ofType {\n                kind\n                name\n                ofType {\n                  kind\n                  name\n                  ofType {\n                    kind\n                    name\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  ","operationName":"IntrospectionQuery"}
+[INFO] 2020-05-18T18:43:40.976Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:43:40.978Z-[tools:logger] | Body: {"name":"Patate","price":"1"}
+[INFO] 2020-05-18T18:43:40.977Z-[tools:logger] | POST /user/item/new
+[INFO] 2020-05-18T18:43:41.131Z-[xdk:XresHandler] | { _id: 5ec2d75db1f4eb54a08bddd2, name: 'Patate', price: 1, __v: 0 }
+[INFO] 2020-05-18T18:49:13.138Z-[tools:logger] | DELETE /user/item/delete
+[INFO] 2020-05-18T18:49:13.137Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:49:13.138Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-18T18:50:53.278Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:50:53.279Z-[tools:logger] | DELETE /user/item/delete
+[INFO] 2020-05-18T18:50:53.280Z-[tools:logger] | Body: {"name":"Patate"}
+[BOOT] 2020-05-18T18:54:19.987Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-18T18:54:30.819Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:54:30.824Z-[tools:logger] | DELETE /user/item/delete
+[INFO] 2020-05-18T18:54:30.826Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-18T18:54:30.964Z-[xdk:XresHandler] | [object Object]
+[INFO] 2020-05-18T18:56:03.974Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:56:03.975Z-[tools:logger] | POST /user/item/new
+[INFO] 2020-05-18T18:56:03.976Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T18:56:14.841Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:56:14.843Z-[tools:logger] | POST /user/item/new
+[INFO] 2020-05-18T18:56:14.843Z-[tools:logger] | Body: {"name":"Patate","price":"1"}
+[INFO] 2020-05-18T18:56:14.887Z-[xdk:XresHandler] | { _id: 5ec2da4e019b11357840bd6f, name: 'Patate', price: 1, __v: 0 }
+[INFO] 2020-05-18T18:56:27.830Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:56:27.831Z-[tools:logger] | POST /user/item/new
+[INFO] 2020-05-18T18:56:27.832Z-[tools:logger] | Body: {"name":"Choux-fleur","price":"2.2"}
+[INFO] 2020-05-18T18:56:27.840Z-[xdk:XresHandler] | {
+  _id: 5ec2da5b019b11357840bd70,
+  name: 'Choux-fleur',
+  price: 2.2,
+  __v: 0
+}
+[INFO] 2020-05-18T18:56:40.331Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:56:40.333Z-[tools:logger] | POST /user/item/new
+[INFO] 2020-05-18T18:56:40.335Z-[tools:logger] | Body: {"name":"Carottes","price":"2"}
+[INFO] 2020-05-18T18:56:40.344Z-[xdk:XresHandler] | { _id: 5ec2da68019b11357840bd71, name: 'Carottes', price: 2, __v: 0 }
+[INFO] 2020-05-18T18:58:39.423Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:58:39.427Z-[tools:logger] | Body: {"name":"Carottes","price":"2"}
+[INFO] 2020-05-18T18:58:39.426Z-[tools:logger] | GET /user/items
+[INFO] 2020-05-18T18:58:45.370Z-[tools:logger] | GET /user/items
+[INFO] 2020-05-18T18:58:45.369Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:58:45.371Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T18:59:00.144Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T18:59:00.145Z-[tools:logger] | GET /user/items
+[INFO] 2020-05-18T18:59:00.148Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:00:46.326Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:00:46.327Z-[tools:logger] | GET /user/items
+[INFO] 2020-05-18T19:00:46.328Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:00:49.172Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:00:49.174Z-[tools:logger] | GET /user/items
+[INFO] 2020-05-18T19:00:49.175Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:02:20.091Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:02:20.092Z-[tools:logger] | GET /user/items
+[INFO] 2020-05-18T19:02:20.092Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:02:38.342Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:02:38.346Z-[tools:logger] | GET /user/items
+[INFO] 2020-05-18T19:02:38.348Z-[tools:logger] | Body: {}
+[BOOT] 2020-05-18T19:04:41.427Z-[core:index] | successfully connected to the mongoDb Server
+[BOOT] 2020-05-18T19:05:29.450Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-18T19:06:26.850Z-[tools:logger] | GET /items
+[INFO] 2020-05-18T19:06:26.848Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:06:26.851Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:06:26.867Z-[xdk:XresHandler] | [{"_id":"5ec2da4e019b11357840bd6f","name":"Patate","price":1,"__v":0},{"_id":"5ec2da5b019b11357840bd70","name":"Choux-fleur","price":2.2,"__v":0},{"_id":"5ec2da68019b11357840bd71","name":"Carottes","price":2,"__v":0}]
+[INFO] 2020-05-18T19:07:26.168Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:07:26.171Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:07:26.169Z-[tools:logger] | GET /item/:Patate
+[INFO] 2020-05-18T19:07:42.954Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:07:42.960Z-[tools:logger] | GET /item/:patate
+[INFO] 2020-05-18T19:07:42.965Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:07:50.955Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:07:50.956Z-[tools:logger] | GET /item/Patate
+[INFO] 2020-05-18T19:07:50.958Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:11:57.217Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:11:57.219Z-[tools:logger] | GET /item/patate
+[INFO] 2020-05-18T19:11:57.220Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:12:27.065Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:12:27.066Z-[tools:logger] | PUT /item/patate
+[INFO] 2020-05-18T19:12:27.067Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:12:32.484Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:12:32.486Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:12:32.485Z-[tools:logger] | GET /item/:patate
+[INFO] 2020-05-18T19:12:35.459Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:12:35.462Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:12:35.461Z-[tools:logger] | GET /item/:Patate
+[INFO] 2020-05-18T19:12:37.852Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:12:37.855Z-[tools:logger] | Body: {}
+[INFO] 2020-05-18T19:12:37.854Z-[tools:logger] | GET /item/Patate
+[INFO] 2020-05-18T19:15:09.035Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:15:09.038Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:15:09.039Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-18T19:15:27.380Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:15:27.377Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:15:27.381Z-[tools:logger] | Body: {"name":"patate"}
+[INFO] 2020-05-18T19:24:11.842Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:24:11.844Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:24:11.846Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-18T19:24:15.585Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:24:15.587Z-[tools:logger] | PUT /item/:name
+[INFO] 2020-05-18T19:24:15.589Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-18T19:28:39.529Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:28:39.532Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:28:39.533Z-[tools:logger] | Body: {"name":"Patate"}
+[BOOT] 2020-05-18T19:28:40.265Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-18T19:38:30.403Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:38:30.404Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:38:30.405Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-18T19:39:40.075Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:39:40.076Z-[tools:logger] | Body: {"name":"Choux-fleur"}
+[INFO] 2020-05-18T19:39:40.076Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:39:44.108Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:39:44.110Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:39:44.111Z-[tools:logger] | Body: {"name":"Choux-fle"}
+[BOOT] 2020-05-18T19:41:02.080Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-18T19:41:04.114Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:41:04.117Z-[tools:logger] | Body: {"name":"Choux-fle"}
+[INFO] 2020-05-18T19:41:04.116Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:41:11.904Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:41:11.907Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:41:11.909Z-[tools:logger] | Body: {"name":"Choux-fleur"}
+[INFO] 2020-05-18T19:41:40.847Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:41:40.849Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:41:40.851Z-[tools:logger] | Body: {"name":"Patate"}
+[BOOT] 2020-05-18T19:43:06.837Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-18T19:43:16.331Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:43:16.329Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:43:16.331Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-18T19:43:18.169Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T19:43:18.175Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-18T19:43:18.176Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-18T20:30:34.583Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-18T20:30:34.587Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-18T20:30:34.586Z-[tools:logger] | GET /item/:name
+[BOOT] 2020-05-19T17:36:25.443Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-19T17:40:05.055Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T17:40:05.056Z-[tools:logger] | GET /
+[INFO] 2020-05-19T17:40:05.057Z-[tools:logger] | Body: {}
+[INFO] 2020-05-19T17:41:10.683Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T17:41:10.683Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T17:41:10.684Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T17:41:26.470Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T17:41:26.471Z-[tools:logger] | PUT /item/:name
+[INFO] 2020-05-19T17:41:26.472Z-[tools:logger] | Body: {"name":"Patate","price":"5"}
+[INFO] 2020-05-19T17:44:17.679Z-[tools:logger] | PUT /item/:name
+[INFO] 2020-05-19T17:44:17.677Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T17:44:17.680Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T17:44:24.242Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T17:44:24.240Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T17:44:24.243Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T18:58:37.517Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T18:58:37.580Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T18:58:37.575Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T19:09:55.321Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:09:55.324Z-[tools:logger] | DELETE /item/:name
+[INFO] 2020-05-19T19:09:55.326Z-[tools:logger] | Body: {"name":"Patate"}
+[BOOT] 2020-05-19T19:09:56.827Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-19T19:10:01.031Z-[xdk:XresHandler] | [object Object]
+[INFO] 2020-05-19T19:11:50.807Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:11:50.811Z-[tools:logger] | DELETE /item/new
+[INFO] 2020-05-19T19:11:50.812Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T19:11:50.817Z-[xdk:XresHandler] | [object Object]
+[INFO] 2020-05-19T19:12:06.127Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:12:06.128Z-[tools:logger] | GET /items
+[INFO] 2020-05-19T19:12:06.131Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T19:12:06.155Z-[xdk:XresHandler] | [{"_id":"5ec2da5b019b11357840bd70","name":"Choux-fleur","price":2.2,"__v":0},{"_id":"5ec2da68019b11357840bd71","name":"Carottes","price":2,"__v":0}]
+[INFO] 2020-05-19T19:12:16.648Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:12:16.650Z-[tools:logger] | GET /item/new
+[INFO] 2020-05-19T19:12:16.652Z-[tools:logger] | Body: {"name":"Patate","price":"2"}
+[INFO] 2020-05-19T19:12:42.355Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:12:42.361Z-[tools:logger] | Body: {"name":"Patate","price":"2"}
+[INFO] 2020-05-19T19:12:42.357Z-[tools:logger] | POST /item/new
+[INFO] 2020-05-19T19:12:42.423Z-[xdk:XresHandler] | { _id: 5ec42faabf72f6110463faa7, name: 'Patate', price: 2, __v: 0 }
+[INFO] 2020-05-19T19:12:48.850Z-[tools:logger] | GET /items
+[INFO] 2020-05-19T19:12:48.849Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:12:48.851Z-[tools:logger] | Body: {"name":"Patate","price":"2"}
+[INFO] 2020-05-19T19:12:48.855Z-[xdk:XresHandler] | [{"_id":"5ec2da5b019b11357840bd70","name":"Choux-fleur","price":2.2,"__v":0},{"_id":"5ec2da68019b11357840bd71","name":"Carottes","price":2,"__v":0},{"_id":"5ec42faabf72f6110463faa7","name":"Patate","price":2,"__v":0}]
+[INFO] 2020-05-19T19:12:56.857Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:12:56.859Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T19:12:56.858Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T19:13:13.675Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:13:13.677Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T19:13:13.678Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T19:13:24.630Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:13:24.634Z-[tools:logger] | Body: {"name":"Patate","price":"5"}
+[INFO] 2020-05-19T19:13:24.633Z-[tools:logger] | PUT /item/:name
+[INFO] 2020-05-19T19:14:19.872Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:14:19.874Z-[tools:logger] | PUT /item/:name
+[INFO] 2020-05-19T19:14:19.876Z-[tools:logger] | Body: {"name":"Patate","price":"5","_id":"ObjectId(\"5ec42faabf72f6110463faa7\")"}
+[INFO] 2020-05-19T19:14:26.065Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:14:26.067Z-[tools:logger] | Body: {"name":"Patate","price":"5","_id":"5ec42faabf72f6110463faa7"}
+[INFO] 2020-05-19T19:14:26.066Z-[tools:logger] | PUT /item/:name
+[BOOT] 2020-05-19T19:17:22.136Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-19T19:18:56.940Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:18:56.943Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T19:18:56.946Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T19:20:51.140Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:20:51.142Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T19:20:51.146Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T19:40:59.136Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:40:59.151Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T19:40:59.149Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T19:41:13.807Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:41:13.808Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T19:41:13.809Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T19:43:59.851Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:43:59.884Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T19:43:59.887Z-[tools:logger] | Body: {}
+[INFO] 2020-05-19T19:44:19.780Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T19:44:19.782Z-[tools:logger] | Body: {"name":"Patate"}
+[INFO] 2020-05-19T19:44:19.782Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T19:47:45.792Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T20:09:42.348Z-[tools:logger] | POST /item/new
+[INFO] 2020-05-19T20:09:42.350Z-[tools:logger] | Body: {"name":"PatateDouce","price":"3"}
+[INFO] 2020-05-19T20:09:42.758Z-[tools:logger] | POST /item/new
+[INFO] 2020-05-19T20:09:42.753Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T20:09:42.762Z-[tools:logger] | Body: {"name":"PatateDouce","price":"3"}
+[INFO] 2020-05-19T20:09:42.791Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T20:09:42.793Z-[tools:logger] | POST /item/new
+[INFO] 2020-05-19T20:09:42.793Z-[tools:logger] | Body: {"name":"Sucre","price":"3"}
+[INFO] 2020-05-19T20:09:45.960Z-[xdk:XresHandler] | {
+  _id: 5ec43d064643564b9cac2c48,
+  name: 'PatateDouce',
+  price: 3,
+  __v: 0
+}
+[INFO] 2020-05-19T20:09:45.968Z-[xdk:XresHandler] | { _id: 5ec43d094643564b9cac2c4a, name: 'Sucre', price: 3, __v: 0 }
+[INFO] 2020-05-19T20:10:05.965Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T20:10:05.966Z-[tools:logger] | POST /item/new
+[INFO] 2020-05-19T20:10:05.967Z-[tools:logger] | Body: {"name":"Sucre","price":"3"}
+[BOOT] 2020-05-19T20:10:07.772Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-19T20:10:35.820Z-[tools:logger] | POST /item/new
+[INFO] 2020-05-19T20:10:35.819Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T20:10:35.821Z-[tools:logger] | Body: {"name":"Farine","price":"2"}
+[INFO] 2020-05-19T20:10:35.857Z-[xdk:XresHandler] | { _id: 5ec43d3b85d1537328b008a8, name: 'Farine', price: 2, __v: 0 }
+[INFO] 2020-05-19T20:10:51.833Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T20:10:51.834Z-[tools:logger] | GET /items
+[INFO] 2020-05-19T20:10:51.835Z-[tools:logger] | Body: {"name":"Farine","price":"2"}
+[INFO] 2020-05-19T20:10:51.841Z-[xdk:XresHandler] | [{"_id":"5ec2da5b019b11357840bd70","name":"Choux-fleur","price":2.2,"__v":0},{"_id":"5ec2da68019b11357840bd71","name":"Carottes","price":2,"__v":0},{"_id":"5ec42faabf72f6110463faa7","name":"Patate","price":2,"__v":0},{"_id":"5ec43d064643564b9cac2c48","name":"PatateDouce","price":3,"__v":0},{"_id":"5ec43d094643564b9cac2c4a","name":"Sucre","price":3,"__v":0},{"_id":"5ec43d3b85d1537328b008a8","name":"Farine","price":2,"__v":0}]
+[INFO] 2020-05-19T20:11:04.251Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-19T20:11:04.249Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T20:11:04.252Z-[tools:logger] | Body: {"name":"Sucre"}
+[INFO] 2020-05-19T20:11:17.734Z-[tools:logger] | DELETE /item/:name
+[INFO] 2020-05-19T20:11:17.733Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-19T20:11:17.736Z-[tools:logger] | Body: {"name":"Sucre"}
+[INFO] 2020-05-19T20:11:17.742Z-[xdk:XresHandler] | [object Object]
