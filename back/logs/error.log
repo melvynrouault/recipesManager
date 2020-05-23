@@ -101,3 +101,7 @@
 [ERR] 2020-05-23T14:29:37.961Z-[xdk:XresHandler] | Error: Item not found
 [ERR] 2020-05-23T14:31:56.126Z-[xdk:XresHandler] | Missing parameters
 [ERR] 2020-05-23T14:33:10.081Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-23T14:35:05.058Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T14:35:12.899Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T14:37:00.456Z-[xdk:XresHandler] | Error: Recipe not found
+[ERR] 2020-05-23T14:37:13.564Z-[xdk:XresHandler] | Error: Recipe not found

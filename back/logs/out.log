@@ -297,3 +297,16 @@
 [INFO] 2020-05-23T14:33:10.076Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
 [INFO] 2020-05-23T14:33:10.077Z-[tools:logger] | GET /item/:name
 [INFO] 2020-05-23T14:33:10.078Z-[tools:logger] | Body: {"name":"PatateDouce"}
+[BOOT] 2020-05-23T14:34:47.623Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-23T14:35:05.054Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-23T14:35:05.057Z-[tools:logger] | Body: {"id":"5ec43d064643564b9cac2c48"}
+[INFO] 2020-05-23T14:35:05.056Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-23T14:35:12.896Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-23T14:35:12.898Z-[tools:logger] | GET /item/:id
+[INFO] 2020-05-23T14:35:12.899Z-[tools:logger] | Body: {"id":"5ec43d064643564b9cac2c48"}
+[INFO] 2020-05-23T14:37:00.438Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-23T14:37:00.440Z-[tools:logger] | Body: {"name":"tartiflette"}
+[INFO] 2020-05-23T14:37:00.439Z-[tools:logger] | GET /recette/:name
+[INFO] 2020-05-23T14:37:13.560Z-[tools:logger] | Body: {"name":"tartiflette"}
+[INFO] 2020-05-23T14:37:13.558Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-23T14:37:13.559Z-[tools:logger] | GET /recette/:name

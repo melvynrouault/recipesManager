@@ -6,19 +6,19 @@ export const state = {
 }
 
 export const getters = {
-  getAllRecipes(state) {
+  getAllItems(state) {
     return state.items;
   },
-  getOneRecipe(state) {
+  getOneItem(state) {
     return state.item;
   }
 }
 
 export const mutations = {
-  SET_ALL_RECIPES(state, items) {
+  SET_ALL_ITEMS(state, items) {
     state.items = items;
   },
-  SET_ONE_RECIPE(state, item) {
+  SET_ONE_ITEM(state, item) {
     state.item = item;
   }
 }
@@ -28,11 +28,11 @@ export const actions = {
   async getAllItems({commit}) {
     await axios.get(process.env.baseUrl + '/items')
     .then((response) => {
-      commit('SET_ALL_RECIPES', response.data);
+      commit('SET_ALL_ITEMS', response.data);
     })
     // In case of errors
     .catch(err => {
-      console.log(`[API CALL RECIPE] ERROR`, err.message);
+      console.log(`[API CALL ITEM] ERROR`, err.message);
       throw new Error(`${err}`);
     })
   },
@@ -40,13 +40,13 @@ export const actions = {
 
     let itemName = name;
 
-    await axios.get(process.env.baseUrl + `/recette/${itemName}`)
+    await axios.get(process.env.baseUrl + `/item/${itemName}`)
     .then((response) => {
       // console.log('[API CAL ONE RECIPE] OK')
-      commit('SET_ONE_RECIPE', response.data);
+      commit('SET_ONE_ITEM', response.data);
       })
       .catch(err => {
-        console.log(`[API CALL ON RECIPE] ERROR`, err.message);
+        console.log(`[API CALL ON ITEM] ERROR`, err.message);
         throw new Error(`${err}`);
     })
   }
