@@ -33,8 +33,8 @@ ItemSchema.statics.createItem = async function(name, price, cb) {
     return null;
 };
 
-ItemSchema.statics.getItem = async function (name, cb) {
-    await this.findOne({ name }, async (err, item) => { 
+ItemSchema.statics.getItem = async function (_id, cb) {
+    await this.findOne({ _id }, async (err, item) => { 
         if (err) return cb(err);
         if (!item) return cb(new Error('Item not found'));
         return cb(null, item);
@@ -49,8 +49,8 @@ ItemSchema.statics.updateItem = async function (_id, name,  price, cb) {
     });
 }
 
-ItemSchema.statics.deleteItem = async function(name, cb) {
-    await this.model('Item').deleteOne({ name }, (err, item) => {
+ItemSchema.statics.deleteItem = async function(_id, cb) {
+    await this.model('Item').deleteOne({ _id }, (err, item) => {
         if (err) return cb(err);
         return cb(null, item);
     });

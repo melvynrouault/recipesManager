@@ -97,3 +97,7 @@
 [ERR] 2020-05-19T20:09:45.977Z-[xdk:XresHandler] | MongoError: E11000 duplicate key error collection: recipesManager-dev.items index: name_1 dup key: { name: "PatateDouce" }
 [ERR] 2020-05-19T20:10:11.809Z-[xdk:XresHandler] | Error: Item already exists
 [ERR] 2020-05-19T20:11:04.256Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-23T14:29:28.797Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-23T14:29:37.961Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-23T14:31:56.126Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T14:33:10.081Z-[xdk:XresHandler] | Error: Item not found

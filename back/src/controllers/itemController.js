@@ -11,8 +11,8 @@ export const addItem = async (req, res) => {
 };
   
 export const getOneItem = async (req, res) => {
-    if (!req.params.name) return throwBadRequest('Missing parameters', res);
-    await ItemModel.getItem(req.params.name, (err, result) => {
+    if (!req.params.id) return throwBadRequest('Missing parameters', res);
+    await ItemModel.getItem(req.params.id, (err, result) => {
         if (err) return throwIntServerError(err, res);
         return sendOKWithData({
             _id: result._id,
@@ -36,8 +36,8 @@ export const editInfosItem = async (req, res) => {
 }
 
 export const deleteItem = async function (req, res) {
-    if (!req.body.name) return throwBadRequest('Missing parameters', res);
-    await ItemModel.deleteItem(req.body.name, (err, result) => {
+    if (!req.body.id) return throwBadRequest('Missing parameters', res);
+    await ItemModel.deleteItem(req.body.id, (err, result) => {
         if (err) return throwIntServerError(err, res);
         return sendOK(res);
     })

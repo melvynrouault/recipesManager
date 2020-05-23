@@ -272,3 +272,28 @@
 [INFO] 2020-05-19T20:11:17.733Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
 [INFO] 2020-05-19T20:11:17.736Z-[tools:logger] | Body: {"name":"Sucre"}
 [INFO] 2020-05-19T20:11:17.742Z-[xdk:XresHandler] | [object Object]
+[BOOT] 2020-05-23T12:59:42.121Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-23T13:00:21.207Z-[tools:logger] | Body: {}
+[INFO] 2020-05-23T13:00:21.206Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-23T13:00:21.207Z-[tools:logger] | GET /
+[INFO] 2020-05-23T14:08:39.323Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-23T14:08:39.324Z-[tools:logger] | GET /recettes
+[INFO] 2020-05-23T14:08:39.325Z-[tools:logger] | Body: {}
+[INFO] 2020-05-23T14:08:39.546Z-[xdk:XresHandler] | []
+[BOOT] 2020-05-23T14:29:18.856Z-[core:index] | successfully connected to the mongoDb Server
+[INFO] 2020-05-23T14:29:28.665Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-23T14:29:28.666Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-23T14:29:28.667Z-[tools:logger] | Body: {"name":"Sucre"}
+[INFO] 2020-05-23T14:29:37.955Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-23T14:29:37.956Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-23T14:29:37.957Z-[tools:logger] | Body: {"name":"Sucre"}
+[INFO] 2020-05-23T14:31:56.118Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-23T14:31:56.125Z-[tools:logger] | DELETE /item/:name
+[INFO] 2020-05-23T14:31:56.126Z-[tools:logger] | Body: {"name":"Sucre"}
+[INFO] 2020-05-23T14:32:41.920Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-23T14:32:41.922Z-[tools:logger] | DELETE /item/:name
+[INFO] 2020-05-23T14:32:41.923Z-[tools:logger] | Body: {"id":"5ec42faabf72f6110463faa7"}
+[INFO] 2020-05-23T14:32:41.940Z-[xdk:XresHandler] | [object Object]
+[INFO] 2020-05-23T14:33:10.076Z-[tools:logger] | +++++++++++++++++++++++++++++++++++++++++++++++
+[INFO] 2020-05-23T14:33:10.077Z-[tools:logger] | GET /item/:name
+[INFO] 2020-05-23T14:33:10.078Z-[tools:logger] | Body: {"name":"PatateDouce"}
