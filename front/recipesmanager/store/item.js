@@ -36,11 +36,11 @@ export const actions = {
       throw new Error(`${err}`);
     })
   },
-  async getOneItem({commit}, {name}) {
+  async getOneItem({commit}, {id}) {
 
-    let itemName = name;
-
-    await axios.get(process.env.baseUrl + `/item/${itemName}`)
+    let itemId = id;
+    console.log("ID ITEM: " + itemId);
+    await axios.get(process.env.baseUrl + `/item/${itemId}`)
     .then((response) => {
       // console.log('[API CAL ONE RECIPE] OK')
       commit('SET_ONE_ITEM', response.data);

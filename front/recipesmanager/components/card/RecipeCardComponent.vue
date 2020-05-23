@@ -69,7 +69,7 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 
 .cardContainer {
   background-color: #B9E4C9;

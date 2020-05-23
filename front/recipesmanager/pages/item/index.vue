@@ -1,56 +1,38 @@
 <template>
-  <div>
-      <!-- appBar -->
-      <h2>Items</h2>
-        <div class="card-column p-3"> <!--  -->
-            <div class="card">+</div> <!-- id="addItem"-->
-            <div v-for="item in items" :key="item">
-                <Item />
-            </div>
-        </div>
-  </div>
+<div>
+    <div class="row">
+        <ItemCardComponent v-for="item of items" :key="item._id"
+            :name="item.name"
+            :price="item.price"
+            :imgName="item.imgName"
+        />
+    </div>
+</div>
 </template>
 
 <script>
-import Item from '~/components/Item.vue'
+
+import ItemCardComponent from '~/components/card/ItemCardComponent.vue';
 
 export default {
-    components : {
-        //appBar
-        Item
-    },
-    data(){
-        return{
-            items = getIte
-        }
+data() {
+    return {
+        items: {},
     }
+},
+components: {
+    ItemCardComponent,
+},
+async fetch ({ store, params }) {
+    await store.dispatch('item/getAllItems');
+},
+created() {
+    this.items = this.$store.getters['item/getAllItems'];
+    console.log(this.items)
+},
 }
 </script>
 
 <style>
-.card-column{
-    column-count: 5;
-}
-
-.listItems{
-    display: flex;
-    flex-direction: row;
-}
-
-#addItem{
-    border: solid 2px;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    color: #356869;
-    background: #FFFBE6;
-}
-
-h2{
-    margin: 30px;
-}
 
 </style>

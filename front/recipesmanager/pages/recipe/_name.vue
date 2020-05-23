@@ -5,6 +5,7 @@
       :dificultyNote="recette.difficulty" 
       :likeNote="recette.note"
       :duration="recette.duration"
+      :ingredients="recette.ingredients"
       globalPrice="45$"
       :descrip="recette.description"
     />
@@ -20,16 +21,15 @@ export default {
   },
   data() {
     return {
-      name: this.$route.params.name,
       recette: {}
     }
   },
-  mounted() {
-    this.$store.dispatch('recette/getOneRecipe', {name : this.name});
-    setTimeout(() => { 
+  async fetch ({ store, params, route }) {
+    await store.dispatch('recette/getOneRecipe', {name : route.params.name });
+  },
+  created() {
       this.recette = this.$store.getters['recette/getOneRecipe'];
-      console.log(JSON.stringify(this.recette))
-    }, 50);
+      // console.log(JSON.stringify(this.recette))
   },
 }
 </script>

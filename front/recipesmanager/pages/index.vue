@@ -27,12 +27,12 @@ export default {
   components: {
     RecipeCardComponent,
   },
-  mounted() {
-    this.$store.dispatch('recette/getAllRecipes');
-    setTimeout(() => { 
+  async fetch ({ store, params }) {
+    await store.dispatch('recette/getAllRecipes');
+  },
+  created() {
       this.recettes = this.$store.getters['recette/getAllRecipes'];
       console.log(this.recettes)
-    }, 50);
   },
   methods: {
     excerpt(chaine){

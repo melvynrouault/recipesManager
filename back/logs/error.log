@@ -105,3 +105,47 @@
 [ERR] 2020-05-23T14:35:12.899Z-[xdk:XresHandler] | Missing parameters
 [ERR] 2020-05-23T14:37:00.456Z-[xdk:XresHandler] | Error: Recipe not found
 [ERR] 2020-05-23T14:37:13.564Z-[xdk:XresHandler] | Error: Recipe not found
+[ERR] 2020-05-23T16:48:40.509Z-[xdk:XresHandler] | Error: Recipe not found
+[ERR] 2020-05-23T17:21:01.448Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:21:36.279Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:21:42.734Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:21:43.750Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:21:46.157Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:21:58.667Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:22:00.868Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:22:19.826Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:22:22.182Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:23:07.093Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:23:08.699Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:23:24.272Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:23:25.864Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:25:05.300Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:25:07.144Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:26:56.634Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:26:58.391Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:27:00.244Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:27:14.177Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:27:16.169Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:27:27.085Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:27:28.946Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:28:21.603Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:28:24.091Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:28:26.084Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:28:33.432Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:29:42.178Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:30:21.497Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:30:24.691Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:30:26.572Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:30:47.911Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:33:49.959Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:33:59.591Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:34:34.576Z-[xdk:XresHandler] | Missing parameters
+[ERR] 2020-05-23T17:37:59.832Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-23T17:38:01.770Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-23T17:38:57.507Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-23T17:38:59.740Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-23T17:39:04.137Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-23T17:42:05.475Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-23T17:42:07.482Z-[xdk:XresHandler] | Error: Item not found
+[ERR] 2020-05-23T18:18:23.186Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "carotte, 3" at path "_id" for model "Item"
+[ERR] 2020-05-23T18:19:02.260Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "carotte, 3" at path "_id" for model "Item"

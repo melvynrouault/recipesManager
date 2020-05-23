@@ -63,7 +63,7 @@ function configRouter() {
     router.route('/item/new')
        .post(logger, itemController.addItem);
 
-    router.route('/item/:name')
+    router.route('/item/:id')
         .get(logger, itemController.getOneItem)
         .put(logger, itemController.editInfosItem)
         .delete(logger, itemController.deleteItem);
