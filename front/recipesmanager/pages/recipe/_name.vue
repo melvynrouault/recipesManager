@@ -6,6 +6,7 @@
       :likeNote="recette.note"
       :duration="recette.duration"
       globalPrice="45$"
+      :listIngredient="recette.ingredients"
       :descrip="recette.description"
     />
   </div>

@@ -10,17 +10,18 @@ const RecipeSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        maxlength: 254,
+        maxLength: 254,
         unique: false,
         required: true,
     },
     ingredients: {
         name: {
-            type: [String],
-            maxLength: 254,
+        type: [String],
+        maxLength: 254,
         },
         quantity: {
-            type: [Number],
+        type: [String],
+        maxLength: 254,
         }
     },
     price: {
@@ -78,7 +79,7 @@ RecipeSchema.statics.getAllRecipes = async function (cb) {
         if (err) return cb(err);
         if (!recipes) return cb(new Error('Recipes not found'));
         return cb(null, recipes);
-      });
+    });
 }
 
 RecipeSchema.statics.getRecipe = async function (name, cb) {

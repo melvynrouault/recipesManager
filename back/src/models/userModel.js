@@ -11,12 +11,6 @@ const UserSchema = new mongoose.Schema({
         maxLength: 254,
         unique: false,
     },
-    lastName: {
-        type: String,
-        required: false,
-        maxlength: 254,
-        unique: false,
-    },
     userEmail: {
         type: String,
         required: true,
@@ -34,7 +28,7 @@ const UserSchema = new mongoose.Schema({
 
 // CRUD USER
 
-UserSchema.statics.createUser = async function(firstName, lastName, userEmail, userPswd, cb) {
+UserSchema.statics.createUser = async function(firstName, userEmail, userPswd, cb) {
     if (!userEmail || !userPswd) return ;
     const hashedSecret = await bcrypt.hash(userPswd, 10);
     let user = await this.findOne({ userEmail })
@@ -60,7 +54,7 @@ UserSchema.statics.getUser = async function (_id, cb) {
 }
 
 
-UserSchema.statics.updateUser = async function (_id, firstName,  lastName, userEmail, cb) {
+UserSchema.statics.updateUser = async function (_id, firstName, userEmail, cb) {
     await this.findOneAndUpdate({ _id }, { firstName, lastName, userEmail }, { new: true }, async (err, user) => {
         if (err) return cb(err);
         if (!user) return cb(new Error('User not found'));

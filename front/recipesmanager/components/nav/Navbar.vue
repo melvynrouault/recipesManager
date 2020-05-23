@@ -8,8 +8,13 @@
     </div>
     <div class="navBar">
       <ul class="nav">
-        <li>
-          <nuxt-link to="">
+        <li v-if="!$auth.loggedIn">
+          <nuxt-link to="/portail">
+            <span>Login</span>
+          </nuxt-link>
+        </li>
+        <li v-if="$auth.loggedIn">
+          <nuxt-link to="/portail">
             <img src="~/assets/img/myRecipes.png" alt="My recipes" class="imgNav">
             <span>My Recipes</span>
           </nuxt-link>
