@@ -4,7 +4,7 @@
       <nuxt-link to="/">
         <h1>Recipe's Manager &nbsp;</h1>
       </nuxt-link>
-      <small>“Le gout des bonnes chose”</small>
+      <small>“Le goût des bonnes choses”</small>
     </div>
     <div class="navBar">
       <ul class="nav">
@@ -15,6 +15,14 @@
         </li>
         <li v-if="$auth.loggedIn">
           <nuxt-link to="/portail">
+        <li>
+          <nuxt-link to="/items">
+            <img src="~/assets/img/myItems.png" alt="My items" class="imgNav">
+            <span>My Items</span>
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/recettes">
             <img src="~/assets/img/myRecipes.png" alt="My recipes" class="imgNav">
             <span>My Recipes</span>
           </nuxt-link>
