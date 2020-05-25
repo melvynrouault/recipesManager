@@ -12,3 +12,4 @@
 [ERR] 2020-05-13T12:26:40.271Z-[xdk:XresHandler] | Error: Recipe already exists
 [ERR] 2020-05-13T12:28:10.760Z-[xdk:XresHandler] | ValidationError: ingredients.quantity: Cast to Array failed for value "2, 0.5" at path "ingredients.quantity"
 [ERR] 2020-05-13T12:28:37.213Z-[xdk:XresHandler] | ValidationError: ingredients.quantity: Cast to Array failed for value "2, 5" at path "ingredients.quantity"
+[ERR] 2020-05-18T18:11:13.398Z-[xdk:XresHandler] | Error: Recipe already exists
