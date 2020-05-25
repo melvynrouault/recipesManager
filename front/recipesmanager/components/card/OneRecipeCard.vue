@@ -12,7 +12,7 @@
         <div class="rate">
           <img src="../../assets/img/star.png" alt="" class="iconsCardBody">
           <p>Note: </p>
-          <p>  {{ likeNote }}/5 </p>
+          <p>{{ likeNote }}/5 </p>
         </div>
         <div class="duration">
           <img src="../../assets/img/duration.png" alt="" class="iconsCardBody">
@@ -28,10 +28,7 @@
       <div class="col-lg-3 col-md-4 col-sm-8">
         <ul>
           Ingrédients :
-          <!-- <li v-for="ingrendient of Ingrédients"></li> -->
-          <li v-for="ingredientID in ingredients" :key="ingredientID">
-            - {{ getOneItemById(ingredientID) }}
-          </li>
+            - {{ listItems }}
         </ul>
       </div>
       <div class="col-lg-9 col-md-12">
@@ -54,7 +51,7 @@
 export default {
   data() {
     return {
-      listItems: []
+      listItems: ''
     }
   },
   props: {
@@ -89,30 +86,6 @@ export default {
     descrip: {
       type: String,
       default: ''
-    }
-  },
-  mounted() {
-    console.log(this.listItems)
-  },
-  // async fetch ({ store, params, context }) {
-  //   await store.dispatch('recette/getOneItem', {id :  });
-  // },
-  created() {
-      this.recette = this.$store.getters['recette/getOneRecipe'];
-      console.log(JSON.stringify(this.recette))
-  },
-  methods: {
-    async getOneItemById(id) {
-      await this.$store.dispatch('item/getOneItem', {id: id});
-      let item = await this.$store.getters['recette/getOneItem'];
-      if(item) {
-        console.log("MON ITEM: " + item );
-        this.listItems.push(item);
-        console.log(this.listItems);
-      } else {
-        console.log("PAS D ITEM")
-      }
-
     }
   },
 }

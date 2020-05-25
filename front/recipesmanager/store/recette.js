@@ -2,7 +2,8 @@ import axios from 'axios';
 
 export const state = {
   recipes: {},
-  recipe: {}
+  recipe: {},
+  // itemsRecipe : {}
 }
 
 export const getters = {
@@ -11,7 +12,10 @@ export const getters = {
   },
   getOneRecipe(state) {
     return state.recipe;
-  }
+  },
+  // getItemsRecipe(state) {
+  //   return state.itemsRecipe;
+  // }
 }
 
 export const mutations = {
@@ -20,7 +24,10 @@ export const mutations = {
   },
   SET_ONE_RECIPE(state, recipe) {
     state.recipe = recipe;
-  }
+  },
+  // ADD_ITEM_RECIPE(state, itemsRecipe) {
+  //   state.itemsRecipe.push(itemsRecipe);
+  // }
 }
 
 export const actions = {
@@ -44,12 +51,31 @@ export const actions = {
 
     await axios.get(process.env.baseUrl + `/recette/${recipeName}`)
     .then((response) => {
-      // console.log('[API CAL ONE RECIPE] OK')
-      commit('SET_ONE_RECIPE', response.data);
+
+      // // je recupère les id des items stocké en db
+      // response.data.ingredients.forEach(item => {
+      //     console.log("ITEM BASE " + JSON.stringify(item))
+
+      //     // je vais chercher l'item correspondant à l'id
+      //     axios.get(process.env.baseUrl + `/item/${item}`).then((response) => {
+
+      //     // Je l'attribue
+      //     item = response.data;
+
+      //     console.log("ITEM FIN " + JSON.stringify(item))
+      //   })
+      // });
+
+      // je check si les items sont bien passés.
+        // console.log("NEW DATA INGREDIENT" + JSON.stringify(response.data.ingredients));
+        commit('SET_ONE_RECIPE', response.data);
+
+
+
       })
       .catch(err => {
         console.log(`[API CALL ON RECIPE] ERROR`, err.message);
         throw new Error(`${err}`);
     })
-  }
+  },
 }

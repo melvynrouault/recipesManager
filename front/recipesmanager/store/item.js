@@ -43,8 +43,9 @@ export const actions = {
     await axios.get(process.env.baseUrl + `/item/${itemId}`)
     .then((response) => {
       // console.log('[API CAL ONE RECIPE] OK')
-      commit('SET_ONE_ITEM', response.data);
-      })
+      console.log("LA RESPONSE DATA : "+ JSON.stringify(response.data)) 
+      commit('SET_ONE_ITEM',JSON.stringify(response.data));
+      })  
       .catch(err => {
         console.log(`[API CALL ON ITEM] ERROR`, err.message);
         throw new Error(`${err}`);

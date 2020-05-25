@@ -14,14 +14,14 @@
 
 <script>
 import OneRecipeCard from '~/components/card/OneRecipeCard.vue';
-
 export default {
   components: {
     OneRecipeCard
   },
   data() {
     return {
-      recette: {}
+      recette: {},
+      items: []
     }
   },
   async fetch ({ store, params, route }) {
