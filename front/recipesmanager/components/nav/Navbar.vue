@@ -15,6 +15,9 @@
         </li>
         <li v-if="$auth.loggedIn">
           <nuxt-link to="/portail">
+          portail
+          </nuxt-link>
+        </li>
         <li>
           <nuxt-link to="/items">
             <img src="~/assets/img/myItems.png" alt="My items" class="imgNav">
