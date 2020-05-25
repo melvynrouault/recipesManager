@@ -21,11 +21,11 @@ export const actions = {
   async fetchUser({commit}) {
     
     // Get the token stored in LocalStorage
-    const token = localStorage.getItem('authToken');
-    console.log(`TOKEN ${token}`);
-    
+    let token = localStorage.getItem('auth._token.local').split(' ');
+    console.log(token[1]);
+  
     // Just decode the token 
-    const decoded = jwt.decode(token);
+    const decoded = jwt.decode(token[1]);
     console.log(`DECODED ${JSON.stringify(decoded)}`);
 
     // Get the id of the user
@@ -39,7 +39,7 @@ export const actions = {
       // In case of no errors
       .then((response) => {
         console.log(`[API CALL USER] OK`);
-        commit('SET_USER', response.data);
+        commit('SET_ONE_USER', response.data);
       })
       // In case of errors
       .catch(err => {

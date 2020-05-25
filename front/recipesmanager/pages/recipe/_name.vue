@@ -7,6 +7,7 @@
       :duration="recette.duration"
       :ingredients="recette.ingredients"
       globalPrice="45$"
+      :listIngredient="recette.ingredients"
       :descrip="recette.description"
     />
   </div>

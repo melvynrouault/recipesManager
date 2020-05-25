@@ -4,11 +4,11 @@
     <h1>My Account</h1>
     <div>
       <div class="userInfos">
-        <p>Name: </p>
+        <p>Name: {{ this.user.firstName }}</p>
         <p></p>
       </div>
       <div class="userInfos">
-        <p>Email: </p>
+        <p>Email: {{ this.user.email }}</p>
         <p></p>
       </div>
     </div>
@@ -22,14 +22,13 @@ export default {
       user: '', 
     }
   },
-  created() {
+  mounted() {
     this.$store.dispatch('user/fetchUser');
-  },
-  methods: {
-    getUser() {
+    setTimeout(() => { 
       this.user = this.$store.getters['user/getOneUser'];
-    }
-  }
+      console.log(JSON.stringify(this.user))
+    }, 50);
+  },
 }
 </script>
 

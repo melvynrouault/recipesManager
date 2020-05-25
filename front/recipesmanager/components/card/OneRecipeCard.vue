@@ -29,6 +29,10 @@
         <ul>
           Ingrédients :
             - {{ listItems }}
+          <li>- A faire</li>
+          <!-- <li v-for="ingredient of listIngredient" :key="ingredient">
+            {{ ingredient.name }}
+          </li> -->
         </ul>
       </div>
       <div class="col-lg-9 col-md-12">
@@ -82,6 +86,10 @@ export default {
     globalPrice: {
       type: String,
       default: ''
+    },
+    listIngredient : {
+      type: Array,
+      default: []
     },
     descrip: {
       type: String,

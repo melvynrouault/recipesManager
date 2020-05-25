@@ -34,6 +34,7 @@ export default {
   components: {
     Notif
   },
+  middleware: 'authentifacted',
   layout: 'portail',
 
   data () {
@@ -53,22 +54,14 @@ export default {
     }
   },
   methods: {
-     async Login() {
+    async Login() {
       let data = {
         email: this.login.email,
         pswd: this.login.pswd
       }
       try {
-        await this.$axios.post('/login', data )
-          .then((resp) => {
-          const token = resp.data.token
-          localStorage.setItem('authToken', token)
-          this.$auth.setUser(resp.data)
-        })
-        // this.$store.dispatch('getAllStores', null, {root:true})
-        // this.$store.dispatch('aliments/getListAliments')
-        this.$router.push('/')
-
+        let response = await this.$auth.loginWith('local', { data: data })
+        console.log(response)
       } catch (e) {
         this.login.error = "Email ou mot de passe invalide, réessayer."
         setTimeout(() => { 
@@ -76,7 +69,14 @@ export default {
         }, 3000);
       }
     },
-     async Register () {
+    async logout () {
+      try {
+        await this.$store.dispatch('logout')
+      } catch (e) {
+        this.formError = e.message
+      }
+    },
+    async Register () {
       let data = {
         firstName: this.register.firstName,
         email: this.register.email,
