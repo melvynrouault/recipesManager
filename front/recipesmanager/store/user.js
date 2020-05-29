@@ -21,11 +21,11 @@ export const actions = {
   async fetchUser({commit}) {
     
     // Get the token stored in LocalStorage
-    let token = localStorage.getItem('auth._token.local').split(' ');
-    console.log(token[1]);
+    let token = localStorage.getItem('auth._token.local');
+    console.log(token);
   
     // Just decode the token 
-    const decoded = jwt.decode(token[1]);
+    const decoded = jwt.decode(token);
     console.log(`DECODED ${JSON.stringify(decoded)}`);
 
     // Get the id of the user

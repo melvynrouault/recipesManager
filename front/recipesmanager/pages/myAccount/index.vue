@@ -22,12 +22,12 @@ export default {
       user: '', 
     }
   },
+  async fetch({store, params}) {
+      await store.dispatch('user/fetchUser')
+  },
   mounted() {
-    this.$store.dispatch('user/fetchUser');
-    setTimeout(() => { 
       this.user = this.$store.getters['user/getOneUser'];
       console.log(JSON.stringify(this.user))
-    }, 50);
   },
 }
 </script>

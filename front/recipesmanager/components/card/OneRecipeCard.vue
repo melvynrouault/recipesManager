@@ -28,11 +28,9 @@
       <div class="col-lg-3 col-md-4 col-sm-8">
         <ul>
           Ingrédients :
-            - {{ listItems }}
-          <li>- A faire</li>
-          <!-- <li v-for="ingredient of listIngredient" :key="ingredient">
+          <li v-for="ingredient of listIngredient" :key="ingredient.id">
             {{ ingredient.name }}
-          </li> -->
+          </li>
         </ul>
       </div>
       <div class="col-lg-9 col-md-12">
@@ -69,7 +67,7 @@ export default {
     },
     ingredients: {
       type: Array,
-      default: []
+      default: null
     },
     dificultyNote: {
       type: Number,
@@ -88,8 +86,8 @@ export default {
       default: ''
     },
     listIngredient : {
-      type: Array,
-      default: []
+      type: '',
+      // default: null
     },
     descrip: {
       type: String,
