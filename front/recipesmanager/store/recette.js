@@ -52,38 +52,6 @@ export const actions = {
 
     let recipeName = name;
 
-
-    // let resRecipe = await axios.get(process.env.baseUrl + `/recette/${recipeName}`);
-    // let resItem = await axios.get(process.env.baseUrl + `/items`);
-    // let data = resRecipe.data;
-    // let dataItem = resItem.data;
-
-    // console.log(JSON.stringify(data));
-    // data.map(([data, dataItem
-    // ]) => this.convert(data, dataItem));
-    // console.log(JSON.stringify(dataItem));
-    // 
-
-    // for (let i = 0; i < data.ingredients.length; i++) {
-    //   const currentItem = data.ingredients[i];
-    //   // console.log(JSON.stringify(currentItem.id));
-    //   const itemID = currentItem.id;
-    //   const item = dataItem.find( aliment => aliment.id = itemID );
-    //   console.log('itemID : ' + itemID);
-    //   console.log('item : ' + JSON.stringify(item));
-    //   // data.ingredient[i] = item;
-    //   itemID = null;
-    //   // console.log(JSON.stringify(item))
-    // }
-    // let i = 0;
-    // data.ingredients.forEach(element => {
-    //   element = dataItem.find( item => item.id = element.id);
-    //   console.log(JSON.stringify(element));
-    //   data.ingredients.splice(i, 1, element);
-    //   i++;
-    // });
-    // console.log(JSON.stringify(data));
-    // console.log( 'FINAL' +  JSON.stringify(data))
     await axios.get(process.env.baseUrl + `/recette/${recipeName}`)
     .then((response) => {
 
@@ -91,15 +59,11 @@ export const actions = {
       for (let i = 0; i < ArrayLength; i++) {
         const currentItemId = response.data.ingredients[i].id;
         axios.get(process.env.baseUrl + `/item/${currentItemId}`).then((resp) => {
-          // Je l'attribue
           const aliment = resp.data;
-          const alimentPrice = resp.data.price;
-          console.log('ALIMENT :::: ' + JSON.stringify(aliment))
           
           commit('ADD_OBJECT_ITEM_RECIPE', aliment , i);
         })        
       }
-      // je check si les items sont bien passés.
         console.log("NEW DATA INGREDIENT" + JSON.stringify(response.data.ingredients));
         commit('SET_ONE_RECIPE', response.data);
 
