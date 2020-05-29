@@ -1,11 +1,12 @@
 <template>
   <div class="">
+    <!-- Le prix est défini lors de la création d'une recette par la somme du prix des items l'a composant. -->
     <OneRecipeCard 
       :name="recette.name" 
       :dificultyNote="recette.difficulty" 
       :likeNote="recette.note"
       :duration="recette.duration"
-      globalPrice="45$"
+      globalPrice="45$" 
       :listIngredient="recette.ingredients"
       :descrip="recette.description"
     />

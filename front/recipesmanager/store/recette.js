@@ -25,11 +25,8 @@ export const mutations = {
   SET_ONE_RECIPE(state, recipe) {
     state.recipe = recipe;
   },
-  ADD_OBJECT_ITEM_RECIPE(state, item, i) {
-    state.recipe.ingredients.splice(i, 0, item);
-  },
-  ADD_TOTAL_PRICE_RECIPE(state, itemPrice) {
-    state.recipe.price += itemPrice;
+  ADD_OBJECT_ITEM_RECIPE(state, item, index) {
+    state.recipe.ingredients.splice(index, 0, item);
   }
 }
 
@@ -60,18 +57,12 @@ export const actions = {
         const currentItemId = response.data.ingredients[i].id;
         axios.get(process.env.baseUrl + `/item/${currentItemId}`).then((resp) => {
           const aliment = resp.data;
-          
           commit('ADD_OBJECT_ITEM_RECIPE', aliment , i);
         })        
       }
-        console.log("NEW DATA INGREDIENT" + JSON.stringify(response.data.ingredients));
         commit('SET_ONE_RECIPE', response.data);
-
-
-
       })
       .catch(err => {
-        console.log(`[API CALL ON RECIPE] ERROR`, err.message);
         throw new Error(`${err}`);
     })
   },
