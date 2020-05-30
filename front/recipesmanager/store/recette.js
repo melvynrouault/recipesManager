@@ -3,7 +3,6 @@ import axios from 'axios';
 export const state = {
   recipes: {},
   recipe: {},
-  // itemsRecipe : {}
 }
 
 export const getters = {
@@ -13,9 +12,6 @@ export const getters = {
   getOneRecipe(state) {
     return state.recipe;
   },
-  // getItemsRecipe(state) {
-  //   return state.itemsRecipe;
-  // }
 }
 
 export const mutations = {
