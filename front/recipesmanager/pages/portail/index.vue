@@ -69,13 +69,6 @@ export default {
         }, 3000);
       }
     },
-    async logout () {
-      try {
-        await this.$store.dispatch('logout')
-      } catch (e) {
-        this.formError = e.message
-      }
-    },
     async Register () {
       let data = {
         firstName: this.register.firstName,

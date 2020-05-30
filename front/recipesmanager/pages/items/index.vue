@@ -20,6 +20,7 @@ data() {
         items: {},
     }
 },
+middleware: 'auth',
 components: {
     ItemCardComponent,
 },

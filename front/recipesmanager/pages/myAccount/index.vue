@@ -21,9 +21,7 @@ export default {
       user: '', 
     }
   },
-  // async fetch({store, params}) {
-  //     await store.dispatch
-  // },
+  middleware: 'auth',
   async created() {
     await this.$store.dispatch('user/fetchUser');
     this.user = this.$store.getters['user/getOneUser'];

@@ -8,28 +8,35 @@
     </div>
     <div class="navBar">
       <ul class="nav">
-        <li v-if="!$auth.loggedIn">
-          <nuxt-link to="/portail">
-            <span>Login</span>
-          </nuxt-link>
-        </li>
-        <li>
+        <li v-if="$auth.loggedIn">
           <nuxt-link to="/items">
             <img src="~/assets/img/myItems.png" alt="My items" class="imgNav">
             <span>My Items</span>
           </nuxt-link>
         </li>
-        <li>
+        <li v-if="$auth.loggedIn">
           <nuxt-link to="/myRecipes">
             <img src="~/assets/img/myRecipes.png" alt="My recipes" class="imgNav">
             <span>My Recipes</span>
           </nuxt-link>
         </li>
-        <li>
-          <nuxt-link to="/myAccount">
+        <li v-if="$auth.loggedIn">
+          <nuxt-link  to="/myAccount">
             <img src="~/assets/img/myAccount.png" alt="My account" class="imgNav">
             <span>My Account</span>
           </nuxt-link>
+        </li>
+        <li v-if="!$auth.loggedIn">
+          <nuxt-link to="/portail">
+            <img src="~/assets/img/login.png" alt="Login" class="imgNav">
+            <span>Login</span>
+          </nuxt-link>
+        </li>
+        <li v-else @click="logout">
+          <a href="#">
+            <img src="~/assets/img/logout.png" alt="Login" class="imgNav">
+            <span>LogOut</span>
+          </a>
         </li>
         <li>
           <span class="content_search">
@@ -44,7 +51,19 @@
   </header>
 </template>
 
-
+<script>
+export default {
+  methods: {
+    async logout() {
+      try {
+        await this.$auth.logout();
+      } catch (e) {
+        this.error = e.response.data.message;
+      }
+    }
+  }
+}
+</script>
 <style lang="scss">
 header {
   display: flex;

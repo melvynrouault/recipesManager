@@ -94,6 +94,10 @@ export default {
 .cardHeader {
   .img_card {
     transition: .1s ease all;
+    height: 20rem;
+    object-fit: cover;
+    width: 100%;
+    max-width: 100%;
   }
   p{
     font-weight: bold;
