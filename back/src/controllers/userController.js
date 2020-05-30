@@ -5,11 +5,11 @@ import utils from '../tools/utils';
 import UserModel from '../models/userModel';
 
 export const registerUser = async (req, res) => {
-    if (!req.body.firstName || !req.body.lastName || !req.body.email || !req.body.pswd || !req.body.pswdConfirm) return throwBadRequest('Missing Parameters', res);
+    if (!req.body.firstName || !req.body.email || !req.body.pswd || !req.body.pswdConfirm) return throwBadRequest('Missing Parameters', res);
     if (!await utils.validateEmail(req.body.email)) return throwBadRequest('Wrong email format', res);
     if (!await utils.validatePassword(req.body.pswd)) return throwBadRequest('Wrong Password format must be: at least 3 char long with 1 uppercase 1 lowercase and 1 number', res);
     if (req.body.pswd != req.body.pswdConfirm) return throwBadRequest('Wrong password confirmation', res);
-    await UserModel.createUser(req.body.firstName, req.body.lastName, req.body.email, req.body.pswd, (err, record) => {
+    await UserModel.createUser(req.body.firstName, req.body.email, req.body.pswd, (err, record) => {
         if (err) return throwIntServerError(err, res);
         return sendCreated(record, res);
     });

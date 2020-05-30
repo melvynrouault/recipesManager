@@ -35,7 +35,6 @@ UserSchema.statics.createUser = async function(firstName, userEmail, userPswd, c
     if (user) return cb(new Error('User already exists'));
     await this.model('User').create({
         firstName,
-        lastName,
         userEmail,
         userPswd: hashedSecret,
     }, (err, record) => {

@@ -76,9 +76,13 @@ export default {
         pswd: this.register.pswd,
         pswdConfirm: this.register.pswdConfirm,
       }
-      console.log(data);
+      let dataLog = {
+        email: this.register.email,
+        pswd : this.register.pswd
+      }
       try {
         this.$axios.post('/register', data )
+        this.$auth.loginWith('local', {data : dataLog})
         this.$router.push('/')
       } catch (e) {
         this.register.error = "Les mots de passe ne sont pas identiques."
