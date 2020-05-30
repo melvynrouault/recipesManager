@@ -6,7 +6,8 @@
           :dificultyNote="recette.difficulty" 
           :likeNote="recette.note"
           :duration="recette.duration"
-          globalPrice="150"
+          :imgUrl="recette.pictures[0]"
+          :globalPrice="recette.totalPrice"
           :descrip="excerpt(recette.description)"
         />
       </div>

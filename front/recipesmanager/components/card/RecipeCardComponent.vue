@@ -5,7 +5,7 @@
     <div class="cardHeader">
       <p>{{ name }}</p>
       <figure>
-        <img class="img_card" :src="require(`@/assets/img/${imgUrl}`)" :alt="name">
+        <img class="img_card" :src="require(`@/assets/img/img_recipes/${imgUrl}`)" :alt="name">
       </figure>
     </div>
     <div class="cardBody">
@@ -23,7 +23,7 @@
       </div>
       <div class="price">
         <img src="../../assets/img/price.png" alt="" class="iconsCardBody">
-        <p>{{ globalPrice }}</p>
+        <p>{{ globalPrice }}$</p>
       </div>
     </div>
     <div class="cardFooter">
@@ -44,7 +44,7 @@ export default {
     },
     imgUrl: {
       type: String,
-      default: 'ramen.jpg'
+      default: ""
     },
     dificultyNote: {
       type: Number,
@@ -59,8 +59,8 @@ export default {
       default: 0
     },
     globalPrice: {
-      type: String,
-      default: ''
+      type: Number,
+      default: 0
     },
     descrip: {
       type: String,

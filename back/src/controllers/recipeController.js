@@ -2,8 +2,8 @@ import {throwBadRequest,  sendOK, sendOKWithData, sendCreated, throwIntServerErr
 import RecipeModel from '../models/recipeModel';
 
 export const addRecipe = async (req, res) => {
-  if (!req.body.name || !req.body.description || !req.body.ingredients || !req.body.price || !req.body.note || !req.body.difficulty || !req.body.duration || !req.body.pictures || !req.body.isPublic) return throwBadRequest('Missing Parameters', res);
-  await RecipeModel.createRecipe(req.body.name, req.body.description, req.body.ingredients, req.body.price,  req.body.note, req.body.difficulty, req.body.duration, req.body.pictures, req.body.isPublic, (err, record) => {
+  if (!req.body.name || !req.body.description || !req.body.ingredients || !req.body.price || !req.body.note || !req.body.difficulty || !req.body.duration || !req.body.pictures || !req.body.isPublic || !req.body.totalPrice) return throwBadRequest('Missing Parameters', res);
+  await RecipeModel.createRecipe(req.body.name, req.body.description, req.body.ingredients, req.body.price,  req.body.note, req.body.difficulty, req.body.duration, req.body.pictures, req.body.isPublic, req.body.totalPrice, (err, record) => {
     if (err) return throwIntServerError(err, res);
     return sendCreated(record, res);
   });
@@ -30,13 +30,14 @@ export const getOneRecipe = async (req, res) => {
       duration: result.duration,
       pictures: result.pictures,
       isPublic: result.isPublic,
+      totalPrice : result.totalPrice
     }, res);
   });
 }
 
 export const editOneRecipe = async (req, res) => {
-  if (!req.params.id || !req.body.name || !req.body.description || !req.body.ingredients ||!req.body.note || !req.body.difficulty || !req.body.duration || !req.body.pictures || !req.body.isPublic) return throwBadRequest('Missing Parameters', res);
-  await RecipeModel.updateRecipe(req.params.id, req.body.name, req.body.description, req.body.ingredients, req.body.note, req.body.difficulty, req.body.duration, req.body.pictures, req.body.isPublic, (err, result) => {
+  if (!req.params.id || !req.body.name || !req.body.description || !req.body.ingredients ||!req.body.note || !req.body.difficulty || !req.body.duration || !req.body.pictures || !req.body.isPublic || !req.body.totalPrice) return throwBadRequest('Missing Parameters', res);
+  await RecipeModel.updateRecipe(req.params.id, req.body.name, req.body.description, req.body.ingredients, req.body.note, req.body.difficulty, req.body.duration, req.body.pictures, req.body.isPublic, req.body.totalPrice, (err, result) => {
     if (err) return throwIntServerError(err, res);
     return sendOKWithData({
       _id: result._id,
@@ -48,6 +49,7 @@ export const editOneRecipe = async (req, res) => {
       duration: result.duration,
       pictures: result.pictures,
       isPublic: result.isPublic,
+      totalPrice : result.totalPrice
     }, res)
   })
 }

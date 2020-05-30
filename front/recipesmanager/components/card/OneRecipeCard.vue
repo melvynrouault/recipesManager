@@ -22,7 +22,7 @@
         <div class="price">
           <img src="../../assets/img/price.png" alt="" class="iconsCardBody">
           <p>Price: </p>
-          <p>{{ globalPrice }}</p>
+          <p>{{ globalPrice }}$</p>
         </div>
       </div>
       <div class="col-lg-3 col-md-4 col-sm-8">
@@ -35,8 +35,8 @@
       </div>
       <div class="col-lg-9 col-md-12">
         <ul class="ListRecipeImg">
-          <li>
-            <img :src="require(`@/assets/img/${imgUrl}`)" :alt="name">
+          <li v-for="pathPicture of imgUrl" :key="pathPicture">
+            <img :src="require(`@/assets/img/img_recipes/${pathPicture}`)" :alt="`Photo de la recette: ${name}`">
           </li>
         </ul>
       </div>
@@ -62,12 +62,8 @@ export default {
       default:''
     },
     imgUrl: {
-      type: String,
-      default: 'ramen.jpg'
-    },
-    ingredients: {
       type: Array,
-      default: null
+      default: () => ([])
     },
     dificultyNote: {
       type: Number,
@@ -82,12 +78,12 @@ export default {
       default: 0
     },
     globalPrice: {
-      type: String,
-      default: ''
+      type: Number,
+      default: 0
     },
     listIngredient : {
       type: '',
-      // default: null
+      default: null
     },
     descrip: {
       type: String,

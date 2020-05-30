@@ -58,7 +58,7 @@ export const actions = {
         axios.get(process.env.baseUrl + `/item/${currentItemId}`).then((resp) => {
           const aliment = resp.data;
           commit('ADD_OBJECT_ITEM_RECIPE', aliment , i);
-        })        
+        })
       }
         commit('SET_ONE_RECIPE', response.data);
       })
