@@ -60,6 +60,7 @@ export const actions = {
           commit('ADD_OBJECT_ITEM_RECIPE', aliment , i);
         })
       }
+        response.data.ingredients = [];
         commit('SET_ONE_RECIPE', response.data);
       })
       .catch(err => {

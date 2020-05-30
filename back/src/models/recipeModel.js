@@ -15,14 +15,8 @@ const RecipeSchema = new mongoose.Schema({
         required: true,
     },
     ingredients: {
-        name: {
-        type: [String],
-        maxLength: 254,
-        },
-        quantity: {
-        type: [String],
-        maxLength: 254,
-        }
+        type: Array,
+        minItems : 1
     },
     price: {
         type: Number,
@@ -38,12 +32,14 @@ const RecipeSchema = new mongoose.Schema({
         required: true,
     },
     duration: {
-      type: Number,
-      unique: false,
-      required: true,
+        type: Number,
+        unique: false,
+        required: true,
     },
     pictures: {
         type: [String],
+        minItems: 0,
+        maxItems: 3,
     },
     isPublic: {
         type: Boolean,

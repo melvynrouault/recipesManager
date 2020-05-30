@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p>{{ this.user }}</p>
     <h1>My Account</h1>
     <div>
       <div class="userInfos">
@@ -22,12 +21,13 @@ export default {
       user: '', 
     }
   },
-  async fetch({store, params}) {
-      await store.dispatch('user/fetchUser')
-  },
-  mounted() {
-      this.user = this.$store.getters['user/getOneUser'];
-      console.log(JSON.stringify(this.user))
+  // async fetch({store, params}) {
+  //     await store.dispatch
+  // },
+  async created() {
+    await this.$store.dispatch('user/fetchUser');
+    this.user = this.$store.getters['user/getOneUser'];
+    console.log(JSON.stringify(this.user))
   },
 }
 </script>

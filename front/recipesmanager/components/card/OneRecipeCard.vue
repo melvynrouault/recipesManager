@@ -29,7 +29,7 @@
         <ul>
           Ingrédients :
           <li v-for="ingredient of listIngredient" :key="ingredient.id">
-            {{ ingredient.name }}
+           - {{ ingredient.name }}
           </li>
         </ul>
       </div>

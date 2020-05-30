@@ -20,7 +20,7 @@
           </nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/recettes">
+          <nuxt-link to="/myRecipes">
             <img src="~/assets/img/myRecipes.png" alt="My recipes" class="imgNav">
             <span>My Recipes</span>
           </nuxt-link>
