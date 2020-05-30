@@ -151,3 +151,63 @@
 [ERR] 2020-05-23T18:19:02.260Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "carotte, 3" at path "_id" for model "Item"
 [ERR] 2020-05-25T16:35:58.157Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "[object Object]" at path "_id" for model "Item"
 [ERR] 2020-05-25T16:35:58.299Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "[object Object]" at path "_id" for model "Item"
+[ERR] 2020-05-30T10:17:09.949Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "undefined" at path "_id" for model "Item"
+[ERR] 2020-05-30T10:17:09.967Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "undefined" at path "_id" for model "Item"
+[ERR] 2020-05-30T10:17:09.980Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "undefined" at path "_id" for model "Item"
+[ERR] 2020-05-30T10:17:09.993Z-[xdk:XresHandler] | CastError: Cast to ObjectId failed for value "undefined" at path "_id" for model "Item"
+[ERR] 2020-05-30T10:17:52.852Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T10:17:59.609Z-[xdk:XresHandler] | Wrong password formatmust be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T10:18:07.161Z-[xdk:XresHandler] | Wrong password formatmust be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T10:20:10.304Z-[xdk:XresHandler] | Wrong password formatmust be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T10:20:31.266Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T10:21:16.304Z-[xdk:XresHandler] | Wrong password formatmust be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T10:29:33.605Z-[xdk:XresHandler] | Wrong password formatmust be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T10:30:39.012Z-[xdk:XresHandler] | Wrong password formatmust be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T11:43:00.627Z-[xdk:XresHandler] | Wrong password formatmust be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T11:43:23.197Z-[xdk:XresHandler] | Wrong password formatmust be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T12:09:58.931Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T12:09:58.952Z-[xdk:XresHandler] | Wrong password formatmust be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T12:14:29.509Z-[xdk:XresHandler] | Wrong Password format must be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T12:14:29.518Z-[xdk:XresHandler] | Wrong password formatmust be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T12:14:48.794Z-[xdk:XresHandler] | Wrong password formatmust be: at least 3 char long with 1 uppercase 1 lowercase and 1 number
+[ERR] 2020-05-30T12:17:19.734Z-[xdk:XresHandler] | Error: user Not Found
+[ERR] 2020-05-30T12:18:42.053Z-[xdk:XresHandler] | Error: User already exists
+[ERR] 2020-05-30T13:54:57.709Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T13:54:59.595Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T13:58:50.773Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:01:02.165Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:01:04.678Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:01:25.861Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:03:45.011Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:03:47.009Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:05:34.925Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:08:15.643Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:08:18.486Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:12:35.554Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:37:18.874Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:38:01.548Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:38:03.597Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:38:36.850Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:38:37.783Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:39:26.832Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:39:27.658Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:40:14.991Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:40:16.019Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:47:21.553Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:47:23.466Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:48:16.124Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:48:17.068Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:49:33.145Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:49:34.095Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:50:40.969Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:50:41.931Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:51:57.643Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:52:00.001Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:52:27.143Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:52:28.160Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:54:00.109Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:54:01.538Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:58:14.771Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T14:58:17.092Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T15:01:32.965Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T15:01:34.430Z-[xdk:XresHandler] | Missing Parameters

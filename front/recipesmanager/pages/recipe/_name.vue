@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <!-- Le prix est défini lors de la création d'une recette par la somme du prix des items l'a composant. -->
+    <!-- Le prix est défini lors de la création d'une recette par la somme du prix des items la composant. -->
     <OneRecipeCard
       :imgUrl="recette.pictures"
       :name="recette.name" 
