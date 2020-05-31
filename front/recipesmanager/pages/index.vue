@@ -49,9 +49,15 @@ export default {
       console.log(this.recettes)
     this.$nuxt.$on('search-recipe', (dataSearched) => {
       this.researchedRecipe = dataSearched;
+      
     })
   },
   mounted() {
+    // this.$store.dispatch('recette/getAllRecipes');
+    // setTimeout(() => { 
+    //   this.recettes = this.$store.getters['recette/getAllRecipes'];
+    //   console.log(this.recettes)
+    // }, 50);
     this.$nuxt.$on('reset-homepage', () => {
       this.$store.dispatch('recette/getAllRecipes');
       this.recettes = this.$store.getters['recette/getAllRecipes'];

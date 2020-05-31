@@ -61,6 +61,12 @@ export default {
     }
   },
   methods: {
+    researchRecipe() {
+      this.$root.$emit('search-recipe', this.researchedRecipe);
+    },
+    testResestHomePage() {
+      this.$root.$emit('reset-homepage');
+    },
     async logout() {
       try {
         await this.$auth.logout();
@@ -68,13 +74,7 @@ export default {
         this.error = e.response.data.message;
       }
     }
-  },
-    researchRecipe() {
-      this.$root.$emit('search-recipe', this.researchedRecipe);
-    },
-    testResestHomePage() {
-      this.$root.$emit('reset-homepage');
-    }
+  }  
 }
 </script>
 
