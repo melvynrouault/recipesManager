@@ -242,3 +242,4 @@
 [ERR] 2020-05-31T20:33:00.834Z-[xdk:XresHandler] | Mssing totalPrice
 [ERR] 2020-05-31T20:34:23.388Z-[xdk:XresHandler] | ValidationError: difficulty: Cast to Number failed for value "deux" at path "difficulty", duration: Cast to Number failed for value "08:02" at path "duration"
 [ERR] 2020-05-31T20:35:22.120Z-[xdk:XresHandler] | ValidationError: duration: Cast to Number failed for value "05:20" at path "duration"
+[ERR] 2020-05-31T21:09:38.369Z-[xdk:XresHandler] | Error: Recipe not found
