@@ -211,3 +211,34 @@
 [ERR] 2020-05-30T14:58:17.092Z-[xdk:XresHandler] | Missing Parameters
 [ERR] 2020-05-30T15:01:32.965Z-[xdk:XresHandler] | Missing Parameters
 [ERR] 2020-05-30T15:01:34.430Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T15:25:38.277Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T15:25:40.668Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T15:29:23.421Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T15:29:25.317Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T15:31:12.432Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-30T15:31:13.484Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T08:20:22.119Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T08:20:33.911Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T08:29:38.371Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T08:30:36.166Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T08:30:42.617Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T08:31:06.261Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T08:34:01.930Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T08:39:21.200Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T08:46:38.917Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T08:46:43.183Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T16:03:22.825Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T16:08:58.135Z-[xdk:XresHandler] | ValidationError: imgName: Path `imgName` is required.
+[ERR] 2020-05-31T16:08:59.468Z-[xdk:XresHandler] | ValidationError: imgName: Path `imgName` is required.
+[ERR] 2020-05-31T20:10:02.520Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T20:17:08.407Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T20:24:09.504Z-[xdk:XresHandler] | Mssing price
+[ERR] 2020-05-31T20:27:27.543Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T20:28:04.648Z-[xdk:XresHandler] | Missing Parameters
+[ERR] 2020-05-31T20:29:41.225Z-[xdk:XresHandler] | Mssing price
+[ERR] 2020-05-31T20:30:25.284Z-[xdk:XresHandler] | Mssing price
+[ERR] 2020-05-31T20:31:33.633Z-[xdk:XresHandler] | Mssing note
+[ERR] 2020-05-31T20:32:18.166Z-[xdk:XresHandler] | Mssing isPublic
+[ERR] 2020-05-31T20:33:00.834Z-[xdk:XresHandler] | Mssing totalPrice
+[ERR] 2020-05-31T20:34:23.388Z-[xdk:XresHandler] | ValidationError: difficulty: Cast to Number failed for value "deux" at path "difficulty", duration: Cast to Number failed for value "08:02" at path "duration"
+[ERR] 2020-05-31T20:35:22.120Z-[xdk:XresHandler] | ValidationError: duration: Cast to Number failed for value "05:20" at path "duration"

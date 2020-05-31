@@ -14,10 +14,13 @@
     "ddos": "0.2.1",
     "esm": "^3.2.25",
     "express": "4.17.1",
+    "formidable": "^1.2.2",
+    "fs-extra": "^9.0.0",
     "helmet": "3.21.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "5.7.13",
     "passport": "^0.4.0",
+    "path": "^0.12.7",
     "sass-loader": "^8.0.2"
   },
   "repository": {

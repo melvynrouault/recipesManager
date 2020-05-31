@@ -20,11 +20,12 @@ const RecipeSchema = new mongoose.Schema({
     },
     price: {
         type: Number,
+        required: false,
     },
     note: {
         type: Number,
         required: true,
-        default: 0,
+        default: 2.5,
     },
     difficulty: {
         type: Number,
@@ -32,7 +33,7 @@ const RecipeSchema = new mongoose.Schema({
         required: true,
     },
     duration: {
-        type: Number,
+        type: String,
         unique: false,
         required: true,
     },

@@ -10,7 +10,7 @@
     </div>
     <div class="cardBody">
       <div class="price">
-        <p>price : {{ price }}$</p>
+        <p>Price : {{ price }}$</p>
       </div>
     </div>
     <!-- </nuxt-link> -->

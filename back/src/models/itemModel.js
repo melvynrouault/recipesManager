@@ -17,14 +17,14 @@ const ItemSchema = new mongoose.Schema({
     },
     imgName : {
         type: String,
-        required: true,
+        required: false,
     }
 });
 
 // CRUD ITEM
 
-ItemSchema.statics.createItem = async function(name, price, imgName, cb) {
-    if (!name || !price || !imgName) return ;
+ItemSchema.statics.createItem = async function(name, price, imgName, cb) { //, 
+    if (!name || !price || !imgName) return ; //
     let item = await this.findOne({ name })
     if (item) return cb(new Error('Item already exists'));
     await this.model('Item').create({
@@ -46,8 +46,8 @@ ItemSchema.statics.getItem = async function (id, cb) {
     });
 }
 
-ItemSchema.statics.updateItem = async function (_id, name, price, imgName, cb) {
-    await this.findOneAndUpdate({ id }, { name, price, imgName }, { new: true }, async (err, item) => {
+ItemSchema.statics.updateItem = async function (_id, name, price, cb) { //, imgName
+    await this.findOneAndUpdate({ id }, { name, price }, { new: true }, async (err, item) => { //, imgName
         if (err) return cb(err);
         if (!item) return cb(new Error('Item not found'));
         return cb(null, item);

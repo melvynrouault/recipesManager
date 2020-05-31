@@ -4,7 +4,7 @@
     <nuxt-link :to="'/recipe'">
     <div class="cardAddBody">
         <figure>
-            <img class="plus" :src="require(`@/assets/img/add.png`)" :alt="add">
+            <img class="plus" :src="require(`@/assets/img/add.png`)">
         </figure>
     </div>
     </nuxt-link>

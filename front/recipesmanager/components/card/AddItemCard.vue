@@ -4,17 +4,16 @@
     <nuxt-link :to="'/item/new'">
     <div class="cardAddBody">
         <figure>
-            <img class="plus" :src="require(`@/assets/img/add.png`)" :alt="add">
+            <img class="plus" :src="require(`@/assets/img/add.png`)">
         </figure>
     </div>
     </nuxt-link>
   </div>
 </div>
-
 </template>
 
 <script>
-export default {
+/*export default {
   props: {
     name: {
         type: String,
@@ -29,7 +28,7 @@ export default {
         default: ''
     }
   },
-}
+}*/
 </script>
 <style lang="scss">
 
