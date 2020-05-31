@@ -2,7 +2,7 @@
   <header>
     <div id="anim">
       <nuxt-link to="/">
-        <h1>Recipe's Manager &nbsp;</h1>
+        <h1 @click="testResestHomePage">Recipe's Manager &nbsp;</h1>
       </nuxt-link>
       <small>“Le goût des bonnes choses”</small>
     </div>
@@ -39,12 +39,14 @@
           </a>
         </li>
         <li>
-          <span class="content_search">
-            <input aria-label="Input" id="inputFormNav" placeholder="Search...">
-            <button type="submit" id="buttonNav">
-              <img src="~/assets/img/search.png" alt="search" id="searchNav">
-            </button>
-          </span>
+          <form action="" @submit.prevent="researchRecipe">
+            <span class="content_search">
+              <input aria-label="Input" id="inputFormNav" placeholder="Search..." v-model="researchedRecipe">
+              <button type="submit" id="buttonNav">
+                <img src="~/assets/img/search.png" alt="search" id="searchNav">
+              </button>
+            </span>
+          </form>
         </li>
       </ul>
     </div>
@@ -53,7 +55,18 @@
 
 <script>
 export default {
+  data() {
+    return {
+      researchedRecipe: '',
+    }
+  },
   methods: {
+    researchRecipe() {
+      this.$root.$emit('search-recipe', this.researchedRecipe);
+    },
+    testResestHomePage() {
+      this.$root.$emit('reset-homepage');
+    },
     async logout() {
       try {
         await this.$auth.logout();
@@ -61,9 +74,11 @@ export default {
         this.error = e.response.data.message;
       }
     }
-  }
+  }  
 }
 </script>
+
+
 <style lang="scss">
 header {
   display: flex;

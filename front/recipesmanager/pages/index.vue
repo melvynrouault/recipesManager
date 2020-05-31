@@ -1,7 +1,7 @@
 <template>
   <div>
       <div class="row">
-        <RecipeCardComponent v-for="recette of recettes" :key="recette._id"
+        <RecipeCardComponent v-for="recette of filteredRecipes" :key="recette._id"
           :name="recette.name" 
           :dificultyNote="recette.difficulty" 
           :likeNote="recette.note"
@@ -21,8 +21,23 @@ import RecipeCardComponent from '~/components/card/RecipeCardComponent.vue';
 export default {
   data() {
     return {
-      recettes: {},
-      exerptDiscrip: ''
+      recettes: [],
+      exerptDiscrip: '',
+      researchedRecipe: ''
+    }
+  },
+  computed: {
+    filteredRecipes: function() {
+      // console.log(`THIS.RECETTES : ${JSON.stringify(this.recettes)}`);
+      let researchedRecipeInForm = this.researchedRecipe;
+      this.researchedRecipe = '';
+      return this.recettes.filter((recette) => {
+        // console.log(`RECETTE IN FILTER ${JSON.stringify(recette)}`);
+        // console.log(`RECETTE NAME IN FILTER ${recette.name}`);
+        console.log('RRIF' + researchedRecipeInForm.toLowerCase());
+        let recetteName = recette.name.toLowerCase(); 
+        return recetteName.match(researchedRecipeInForm.toLowerCase());
+      });
     }
   },
   components: {
@@ -34,6 +49,21 @@ export default {
   created() {
       this.recettes = this.$store.getters['recette/getAllRecipes'];
       console.log(this.recettes)
+    this.$nuxt.$on('search-recipe', (dataSearched) => {
+      this.researchedRecipe = dataSearched;
+      
+    })
+  },
+  mounted() {
+    // this.$store.dispatch('recette/getAllRecipes');
+    // setTimeout(() => { 
+    //   this.recettes = this.$store.getters['recette/getAllRecipes'];
+    //   console.log(this.recettes)
+    // }, 50);
+    this.$nuxt.$on('reset-homepage', () => {
+      this.$store.dispatch('recette/getAllRecipes');
+      this.recettes = this.$store.getters['recette/getAllRecipes'];
+    })
   },
   methods: {
     excerpt(chaine){

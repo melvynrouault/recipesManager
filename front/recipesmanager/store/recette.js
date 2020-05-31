@@ -28,7 +28,7 @@ export const mutations = {
 
 export const actions = {
 
-  async getAllRecipes({commit}) {
+  async getAllRecipes({ commit }) {
     await axios.get(process.env.baseUrl + '/recettes')
     .then((response) => {
       // console.log(`[API CALL RECIPE] OK`);
@@ -41,7 +41,7 @@ export const actions = {
       throw new Error(`${err}`);
     })
   },
-  async getOneRecipe({commit}, {name}) {
+  async getOneRecipe({ commit }, { name }) {
 
     let recipeName = name;
 
