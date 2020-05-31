@@ -33,7 +33,9 @@ export default {
       return this.recettes.filter((recette) => {
         // console.log(`RECETTE IN FILTER ${JSON.stringify(recette)}`);
         // console.log(`RECETTE NAME IN FILTER ${recette.name}`);
-        return recette.name.match(researchedRecipeInForm);
+        console.log('RRIF' + researchedRecipeInForm.toLowerCase());
+        let recetteName = recette.name.toLowerCase(); 
+        return recetteName.match(researchedRecipeInForm.toLowerCase());
       });
     }
   },
