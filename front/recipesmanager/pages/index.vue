@@ -1,7 +1,7 @@
 <template>
   <div>
       <div class="row">
-        <RecipeCardComponent v-for="recette of recettes" :key="recette._id"
+        <RecipeCardComponent v-for="recette of filteredRecipes" :key="recette._id"
           :name="recette.name" 
           :dificultyNote="recette.difficulty" 
           :likeNote="recette.note"
@@ -20,12 +20,34 @@ import RecipeCardComponent from '~/components/card/RecipeCardComponent.vue';
 export default {
   data() {
     return {
-      recettes: {},
-      exerptDiscrip: ''
+      recettes: [],
+      exerptDiscrip: '',
+      researchedRecipe: ''
+    }
+  },
+  computed: {
+    filteredRecipes: function() {
+      // console.log(`THIS.RECETTES : ${JSON.stringify(this.recettes)}`);
+      let researchedRecipeInForm = this.researchedRecipe;
+      this.researchedRecipe = '';
+      return this.recettes.filter((recette) => {
+        // console.log(`RECETTE IN FILTER ${JSON.stringify(recette)}`);
+        // console.log(`RECETTE NAME IN FILTER ${recette.name}`);
+        return recette.name.match(researchedRecipeInForm);
+      });
     }
   },
   components: {
     RecipeCardComponent,
+  },
+  created() {
+    this.$nuxt.$on('search-recipe', (dataSearched) => {
+      this.researchedRecipe = dataSearched;
+  //     // this.$store.dispatch('recette/getOneRecipe', {name: dataSearched});
+  //     // this.recettes = this.$store.getters['recette/getOneRecipe']
+  //     // console.log( `RESPONSE OF THE CREATED TRUC DE MERDE ${JSON.stringify(this.recettes)}`);
+      
+    })
   },
   mounted() {
     this.$store.dispatch('recette/getAllRecipes');
@@ -33,6 +55,10 @@ export default {
       this.recettes = this.$store.getters['recette/getAllRecipes'];
       console.log(this.recettes)
     }, 50);
+    this.$nuxt.$on('test-reset', () => {
+      this.$store.dispatch('recette/getAllRecipes');
+      this.recettes = this.$store.getters['recette/getAllRecipes'];
+    })
   },
   methods: {
     excerpt(chaine){
