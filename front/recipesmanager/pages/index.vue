@@ -43,9 +43,6 @@ export default {
   created() {
     this.$nuxt.$on('search-recipe', (dataSearched) => {
       this.researchedRecipe = dataSearched;
-  //     // this.$store.dispatch('recette/getOneRecipe', {name: dataSearched});
-  //     // this.recettes = this.$store.getters['recette/getOneRecipe']
-  //     // console.log( `RESPONSE OF THE CREATED TRUC DE MERDE ${JSON.stringify(this.recettes)}`);
       
     })
   },
@@ -55,7 +52,7 @@ export default {
       this.recettes = this.$store.getters['recette/getAllRecipes'];
       console.log(this.recettes)
     }, 50);
-    this.$nuxt.$on('test-reset', () => {
+    this.$nuxt.$on('reset-homepage', () => {
       this.$store.dispatch('recette/getAllRecipes');
       this.recettes = this.$store.getters['recette/getAllRecipes'];
     })

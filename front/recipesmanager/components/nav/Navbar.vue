@@ -47,7 +47,7 @@ export default {
       this.$root.$emit('search-recipe', this.researchedRecipe);
     },
     testResestHomePage() {
-      this.$root.$emit('test-reset');
+      this.$root.$emit('reset-homepage');
     }
   }  
 }
