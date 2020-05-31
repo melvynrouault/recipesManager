@@ -20,10 +20,25 @@ export const mutations = {
   },
   SET_ONE_ITEM(state, item) {
     state.item = item;
+  },
+  ADD_ONE_ITEM(state, item) {
+    state.item = item;
   }
 }
 
 export const actions = {
+
+  async addItem({commit}) {
+    await axios.get(process.env.baseUrl + '/item/new')
+    .then((response) => {
+      commit('ADD_ONE_ITEM', response.data);
+    })
+    // In case of errors
+    .catch(err => {
+      console.log(`[API CALL ITEM] ERROR`, err.message);
+      throw new Error(`${err}`);
+    })
+  },
 
   async getAllItems({commit}) {
     await axios.get(process.env.baseUrl + '/items')

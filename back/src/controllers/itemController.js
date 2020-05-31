@@ -4,7 +4,7 @@ import ItemModel from '../models/itemModel';
 
 export const addItem = async (req, res) => {
     if (!req.body.name || !req.body.price) return throwBadRequest('Missing Parameters', res);
-    await ItemModel.createItem(req.body.name, req.body.price, (err, record) => {
+    await ItemModel.createItem(req.body.name, req.body.price, req.body.imgName, (err, record) => {
         if (err) return throwIntServerError(err, res);
         return sendCreated(record, res);
     });
@@ -18,6 +18,7 @@ export const getOneItem = async (req, res) => {
             _id: result._id,
             name: result.name,
             price: result.price,
+            imgName: result.imgName,
         }, res)
     })
   }

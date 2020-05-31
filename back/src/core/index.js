@@ -12,6 +12,7 @@ import logger from '../tools/logger';
 import * as userController from '../controllers/userController';
 import * as recipeController from '../controllers/recipeController';
 import * as itemController from '../controllers/itemController';
+//import * as fileSystem from '../controllers/fileSystem';
 
 import { update } from 'ddos/lib';
 
@@ -70,6 +71,9 @@ function configRouter() {
 
     router.route('/items')
     .get(logger, itemController.getAllItems);
+
+    //router.route('/filesystem')
+    //.post(logger, fileSystem.download);
 
     app.use(router);
 }

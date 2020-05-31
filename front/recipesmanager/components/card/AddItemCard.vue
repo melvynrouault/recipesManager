@@ -1,26 +1,19 @@
 <template>
 <div class="col-md-4 col-lg-2 col-sm-12">
-  <div class="cardContainer">
-    <!-- <nuxt-link :to=" '/item/' + name"> -->
-    <div class="cardHeader">
-      <p>{{ name }}</p>
-      <figure>
-        <img class="img_card" :src="require(`@/assets/img/img_aliment/${imgName}`)" :alt="name">
-      </figure>
+  <div class="cardContainer addcard">
+    <nuxt-link :to="'/item/new'">
+    <div class="cardAddBody">
+        <figure>
+            <img class="plus" :src="require(`@/assets/img/add.png`)">
+        </figure>
     </div>
-    <div class="cardBody">
-      <div class="price">
-        <p>Price : {{ price }}$</p>
-      </div>
-    </div>
-    <!-- </nuxt-link> -->
+    </nuxt-link>
   </div>
 </div>
-
 </template>
 
 <script>
-export default {
+/*export default {
   props: {
     name: {
         type: String,
@@ -35,9 +28,13 @@ export default {
         default: ''
     }
   },
-}
+}*/
 </script>
 <style lang="scss">
+
+.addcard{
+    height: 24rem;
+}
 
 .cardContainer {
   background-color: #B9E4C9;
@@ -47,26 +44,22 @@ export default {
     color: inherit;
   }
   &:hover {
-    .img_card{
+    .plus{
       transform: scale(1.2) translateZ(0);
     }
   }
 }
 
-.cardHeader p,
-.cardBody,
-.cardFooter {
+.cardAddHeader p,
+.cardAddBody {
   padding: .8rem;
 }
 
-.cardHeader {
-  .img_card {
-    transition: .1s ease all;
-    width: 100%;
-    min-height: 15rem;
-    max-height: 15rem;
-    object-fit: cover;
+.cardAddHeader {
+    figure {
+      display: flex;
   }
+
   p{
     font-weight: bold;
     font-size:2.1rem;
@@ -77,12 +70,13 @@ export default {
   }
 }
 
-.cardBody {
+.cardAddBody {
   display: flex;
   justify-content: space-between;
   text-align: center;
   position: relative;
   font-size: 1.2rem;
+  height: 100%;
   &:after {
     content:'';
     position: absolute;
@@ -94,6 +88,12 @@ export default {
     width: 85%;
     height: 1px;
     background-color:#FD5523;
+  }
+
+  .plus {
+    transition: .1s ease all;
+    height: 80%;
+    margin-top: 20px;
   }
 }
 
