@@ -14,9 +14,9 @@
           <h3>Ingredients</h3>
            <select v-model="recipe.ingredients" id="ingredients" name="ingredients">
                 <option value="choux-fleur">choux</option>
-                <option value="etc">etc</option>
-                <option value="etc1">etc1</option>
-                <option value="etc2">etc2</option>
+                <option value="Patate">patate</option>
+                <option value="Sel">sel</option>
+                <option value="Poivre">poivre</option>
             </select>
             <!-- Difficulty -->
             <br>

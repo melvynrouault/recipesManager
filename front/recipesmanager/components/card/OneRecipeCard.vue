@@ -74,8 +74,8 @@ export default {
       default: 0
     },
     duration: {
-      type: Number,
-      default: 0
+      type: String,
+      default: ""
     },
     globalPrice: {
       type: Number,
